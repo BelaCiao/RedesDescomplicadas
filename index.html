@@ -724,6 +724,12 @@
                                 <li><a href="#" data-topic="cidr_calculator">Calculadora CIDR</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <span class="module-title">Monitoramento Avançado</span>
+                             <ul class="topic-list">
+                                <li><a href="#" data-topic="zabbix">Monitoramento com Zabbix</a></li>
+                            </ul>
+                        </li>
                          <li>
                             <span class="module-title">Prática</span>
                             <ul class="topic-list">
@@ -1163,6 +1169,71 @@
                              <p>Número de Hosts Válidos: <span id="res-hosts"></span></p>
                         </div>
                     </div>
+                `
+            },
+            'zabbix': {
+                title: 'Monitoramento de Redes Críticas com Zabbix',
+                content: `
+                    <svg width="100%" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" style="background-color: #161f2d; border-radius: 8px; margin-bottom: 1.5rem;">
+                      <style>
+                        .line { stroke: #3a4c66; stroke-width: 2; }
+                        .node-bg { fill: var(--bg-light); stroke: var(--border-color); stroke-width: 2; }
+                        .node-text { font-family: 'Inter', sans-serif; font-size: 14px; fill: var(--text-secondary); text-anchor: middle; }
+                        .status-ok { fill: #28a745; }
+                        .status-warn { fill: #ffc107; }
+                        .status-crit { fill: #dc3545; }
+                        .console-text { font-family: 'Inter', sans-serif; font-size: 18px; fill: var(--accent-color); font-weight: 600; text-anchor: middle; }
+                        .glow-crit { animation: pulse 1.5s infinite; }
+                        @keyframes pulse { 0% { r: 6; opacity: 1; } 50% { r: 10; opacity: 0.5; } 100% { r: 6; opacity: 1; } }
+                      </style>
+                      <rect x="350" y="20" width="100" height="60" rx="8" class="node-bg" />
+                      <text x="400" y="55" class="console-text">NOC</text>
+                      <text x="400" y="75" class="node-text">(Zabbix)</text>
+                      <line x1="400" y1="80" x2="100" y2="150" class="line" />
+                      <line x1="400" y1="80" x2="250" y2="150" class="line" />
+                      <line x1="400" y1="80" x2="400" y2="150" class="line" />
+                      <line x1="400" y1="80" x2="550" y2="150" class="line" />
+                      <line x1="400" y1="80" x2="700" y2="150" class="line" />
+                      <rect x="60" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="100" y="175" class="node-text">Router-SP</text><circle cx="100" cy="210" r="6" class="status-ok" />
+                      <rect x="210" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="250" y="175" class="node-text">Switch-Core</text><circle cx="250" cy="210" r="6" class="status-warn" />
+                      <rect x="360" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="400" y="175" class="node-text">DB-Server</text><circle cx="400" cy="210" r="6" class="status-crit glow-crit" />
+                      <rect x="510" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="550" y="175" class="node-text">Firewall</text><circle cx="550" cy="210" r="6" class="status-ok" />
+                      <rect x="660" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="700" y="175" class="node-text">AP-Corp</text><circle cx="700" cy="210" r="6" class="status-ok" />
+                    </svg>
+
+                    <h3>O que é Zabbix?</h3>
+                    <p>Zabbix é uma das mais poderosas ferramentas de monitoramento de código aberto do mercado. Ele é capaz de monitorar praticamente qualquer coisa: performance e disponibilidade de servidores, dispositivos de rede, serviços, e até mesmo métricas de negócio. Em ambientes críticos, onde cada segundo de indisponibilidade pode custar caro, o Zabbix se torna uma peça central da operação de TI.</p>
+                    
+                    <h3>Conceitos Fundamentais</h3>
+                    <p>Para dominar o Zabbix, é crucial entender seus componentes básicos:</p>
+                    <ul>
+                        <li><strong>Hosts:</strong> Qualquer dispositivo que você deseja monitorar (um servidor, roteador, switch, impressora, etc.).</li>
+                        <li><strong>Itens (Items):</strong> Uma métrica específica que você coleta de um host. Por exemplo: uso de CPU, tráfego de uma interface de rede, ou a temperatura de um servidor.</li>
+                        <li><strong>Triggers:</strong> Expressões lógicas que avaliam os dados coletados pelos Itens. Um trigger define um limiar de problema. Exemplo: "O uso da CPU do 'Servidor-WEB' está acima de 90% nos últimos 5 minutos". Quando essa condição é verdadeira, o trigger é ativado.</li>
+                        <li><strong>Ações (Actions):</strong> Respostas automáticas a eventos, como a ativação de um trigger. Uma ação pode ser enviar um email, uma mensagem no Slack, executar um script para tentar resolver o problema, ou escalar o alerta para outro time.</li>
+                        <li><strong>Templates:</strong> Modelos que agrupam Itens, Triggers e outros elementos. Em vez de configurar tudo para cada host, você pode criar um template "Servidor Linux" e aplicá-lo a todos os seus servidores, economizando um tempo imenso.</li>
+                    </ul>
+
+                    <h3>Monitorando Ambientes Críticos</h3>
+                    <p>Em redes de missão crítica (como data centers, sistemas bancários, e telecomunicações), o monitoramento não é reativo, é preditivo e proativo. O objetivo é identificar problemas antes que eles impactem os usuários.</p>
+                    <h4>Métricas Essenciais:</h4>
+                    <ul>
+                        <li><strong>Disponibilidade:</strong> O dispositivo está online? (Ping, SNMP checks).</li>
+                        <li><strong>Performance de Links:</strong> Latência, jitter e perda de pacotes em links WAN.</li>
+                        <li><strong>Saúde de Hardware:</strong> Uso de CPU, memória, temperatura e status de fontes/ventoinhas em equipamentos chave como roteadores core e firewalls.</li>
+                        <li><strong>Tráfego e Erros:</strong> Utilização de banda, erros de CRC e descartes em interfaces críticas.</li>
+                    </ul>
+
+                    <h3>Garantindo Resposta Instantânea da Equipe de Campo</h3>
+                    <p>A meta de ter uma equipe respondendo a um alerta crítico em menos de 10 minutos (e idealmente, quase instantaneamente) não depende apenas da velocidade das pessoas, mas sim da automação e da clareza do processo. A ferramenta é o gatilho, mas o processo garante a ação.</p>
+                    <h4>Estratégia para Resposta Rápida:</h4>
+                    <ol>
+                        <li><strong>Alertas Inteligentes e Contextualizados:</strong> Configure triggers com severidades diferentes (Informação, Atenção, Alta, Desastre). Evite o "ruído" de alertas de baixa prioridade para que os alertas críticos se destaquem. Um alerta deve dizer claramente qual o impacto do problema.</li>
+                        <li><strong>Escalonamento Automatizado:</strong> Use as Ações do Zabbix para criar uma cadeia de comando. Se o analista N1 não reconhecer (Acknowledge) um alerta "Desastre" em 2 minutos, a Ação escala automaticamente para o N2. Se o N2 não responder em 5 minutos, escala para o gestor.</li>
+                        <li><strong>Canais de Notificação Imediatos:</strong> Email é lento. Integre o Zabbix com ferramentas de comunicação instantânea como <strong>Slack, Microsoft Teams, Telegram ou PagerDuty</strong>. Essas ferramentas garantem que o alerta seja visto imediatamente, no celular da equipe de campo.</li>
+                        <li><strong>Dashboards de NOC (Network Operation Center):</strong> Crie painéis visuais com os principais indicadores da rede. Um "mapa" da rede com cores (verde, amarelo, vermelho) em uma TV grande é a forma mais rápida de um time inteiro entender o status do ambiente.</li>
+                        <li><strong>Anexar "Runbooks" aos Alertas:</strong> Cada alerta crítico deve vir acompanhado de um link para um procedimento operacional padrão (runbook). Isso elimina a necessidade do técnico pensar "o que eu faço agora?". O procedimento já está documentado, desde os comandos para diagnóstico até quem contatar.</li>
+                    </ol>
                 `
             }
         };
