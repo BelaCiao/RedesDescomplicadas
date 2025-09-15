@@ -8,8 +8,8 @@ interface MainMenuProps {
 }
 
 const translations = {
-    en: { mainTitle: "CCNAPro Quiz", mainMenuTitle: "Choose a Mode", trainingMode: "Training Mode", examSimulator: "Exam Simulator", trainingDescription: "Practice with instant feedback on each question.", simulatorDescription: "100 questions in 120 minutes. Just like the real exam." },
-    pt: { mainTitle: "CCNAPro Quiz", mainMenuTitle: "Escolha um Modo", trainingMode: "Modo Treino", examSimulator: "Simulador de Exame", trainingDescription: "Pratique com feedback instantâneo em cada questão.", simulatorDescription: "100 questões em 120 minutos. Igual ao exame real." }
+    en: { mainTitle: "Academia da Rede - Quiz", mainMenuTitle: "Choose a Mode", trainingMode: "Training Mode", examSimulator: "Exam Simulator", trainingDescription: "Practice with instant feedback on each question.", simulatorDescription: "100 questions in 120 minutes. Just like the real exam." },
+    pt: { mainTitle: "Academia da Rede - Quiz", mainMenuTitle: "Escolha um Modo", trainingMode: "Modo Treino", examSimulator: "Simulador de Exame", trainingDescription: "Pratique com feedback instantâneo em cada questão.", simulatorDescription: "100 questões em 120 minutos. Igual ao exame real." }
 };
 
 

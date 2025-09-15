@@ -10,8 +10,8 @@ interface QuizSummaryProps {
 }
 
 const translations = {
-    en: { mainTitle: "CCNAPro Quiz", summaryTitle: "Quiz Complete!", summaryText: (score:number, total:number) => `You scored ${score} out of ${total}.`, passMessage: "Excellent! You passed.", failMessage: "Keep studying! You'll get it next time.", restart: "Play Again" },
-    pt: { mainTitle: "CCNAPro Quiz", summaryTitle: "Quiz Concluído!", summaryText: (score:number, total:number) => `Você acertou ${score} de ${total}.`, passMessage: "Excelente! Você passou.", failMessage: "Continue estudando! Você consegue na próxima.", restart: "Jogar Novamente" }
+    en: { mainTitle: "Academia da Rede - Quiz", summaryTitle: "Quiz Complete!", summaryText: (score:number, total:number) => `You scored ${score} out of ${total}.`, passMessage: "Excellent! You passed.", failMessage: "Keep studying! You'll get it next time.", restart: "Play Again" },
+    pt: { mainTitle: "Academia da Rede - Quiz", summaryTitle: "Quiz Concluído!", summaryText: (score:number, total:number) => `Você acertou ${score} de ${total}.`, passMessage: "Excelente! Você passou.", failMessage: "Continue estudando! Você consegue na próxima.", restart: "Jogar Novamente" }
 };
 
 const QuizSummary = ({ score, total, language, onRestart, onBackToGuide }: QuizSummaryProps) => {

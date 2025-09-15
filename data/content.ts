@@ -105,720 +105,745 @@ export const termsData: Record<string, { title: string; definition: string; anal
 };
 
 export const topicsData: Record<string, { title: string; content: string }> = {
-    'ip': {
-        title: 'Endereçamento IP (Internet Protocol)',
+    'boas_vindas_1': {
+        title: 'Boas-vindas à Sua Jornada em Redes',
         content: `
-            <h3>O que é?</h3>
-            <p>O Endereço de Protocolo de Internet (<span class="term" data-term="ip">IP</span>) é um rótulo numérico único atribuído a cada dispositivo conectado a uma rede de computadores que utiliza o Protocolo de Internet para comunicação. Sua principal função é permitir a identificação e localização dos dispositivos na rede.</p>
-            <h3>Como Funciona?</h3>
-            <p>Pense nele como o endereço de uma casa. Assim como o carteiro precisa de um endereço para entregar uma carta, os roteadores na internet precisam de um endereço IP para entregar pacotes de dados ao destino correto.</p>
+            <h3>Bem-vindo, futuro especialista em conectividade!</h3>
+            <p>É com grande prazer que te recebo na Academia da Rede. Meu nome é Maicon Gois e serei seu guia nesta jornada que transformará sua curiosidade em conhecimento sólido e prático.</p>
+            <p>Juntos, vamos explorar o universo das redes de computadores, começando pelos conceitos mais básicos e avançando de forma consistente por temas como Mikrotik, Linux, segurança cibernética e as complexas arquiteturas de BGP que sustentam a internet dos provedores.</p>
+            <h4>O que esperar desta experiência?</h4>
             <ul>
-                <li><strong>IPv4:</strong> A versão mais comum, com 32 bits, escrita como quatro números de 0 a 255 separados por pontos (ex: 192.168.1.1).</li>
-                <li><strong>IPv6:</strong> Uma versão mais nova, com 128 bits, criada para resolver a escassez de endereços IPv4.</li>
+                <li><strong>Conteúdo direto ao ponto:</strong> Aulas focadas nas habilidades que o mercado de trabalho realmente exige.</li>
+                <li><strong>Prática em ambientes realistas:</strong> Utilizaremos o simulador EVE-NG para construir e gerenciar redes que espelham infraestruturas corporativas.</li>
+                <li><strong>Aprendizado interativo:</strong> Ao final de cada tópico, use a funcionalidade "IA Responde" para sanar dúvidas e solidificar seu aprendizado.</li>
             </ul>
-            <h4>Máscara de Sub-rede</h4>
-            <p>A máscara de sub-rede (ex: 255.255.255.0) trabalha junto com o IP para definir qual parte do endereço identifica a rede e qual parte identifica o dispositivo específico (host) dentro dessa rede.</p>
+            <p>Estou empolgado para começarmos. Prepare-se para mergulhar na tecnologia que move o mundo digital. Vamos nessa!</p>
         `
     },
-    'ip_static': {
-        title: 'IP Estático',
+    'introducao_redes_1': {
+        title: 'Decifrando as Redes',
         content: `
-            <h3>O que é?</h3>
-            <p>Um endereço IP estático é um endereço fixo, que não muda. Ele é configurado manualmente em um dispositivo de rede pelo administrador.</p>
-            <h3>Como Funciona?</h3>
-            <p>Em vez de o dispositivo pedir um endereço a um servidor <span class="term" data-term="dhcp">DHCP</span>, o administrador insere diretamente nas configurações de rede do dispositivo o endereço IP, a máscara de sub-rede, o <span class="term" data-term="gateway">Gateway</span> Padrão e os servidores <span class="term" data-term="dns">DNS</span>.</p>
-            <h4>Quando usar?</h4>
-            <ul>
-                <li><strong>Servidores:</strong> Para que os clientes sempre saibam onde encontrar o servidor (web, email, jogos).</li>
-                <li><strong>Impressoras de Rede:</strong> Para que os computadores sempre saibam como enviar trabalhos de impressão.</li>
-                <li><strong>Dispositivos de Acesso Remoto:</strong> Facilita a conexão a um dispositivo específico de fora da rede.</li>
-            </ul>
-            <p><strong>Analogia:</strong> Um IP estático é como o endereço de uma loja ou de um serviço público. Ele precisa ser fixo e conhecido por todos para que as pessoas possam encontrá-lo facilmente. Um IP dinâmico é como o número de um quarto de hotel, que muda a cada vez que você se hospeda.</p>
+            <h3>O Ponto de Partida</h3>
+            <p>Nesta aula inaugural, vamos desvendar o conceito de rede de computadores. De forma simples, uma rede consiste em dois ou mais dispositivos conectados que trocam informações e compartilham recursos. Essa é a espinha dorsal de toda a nossa vida digital, permitindo desde uma simples mensagem instantânea até o streaming de filmes em alta definição. Nosso objetivo aqui é entender os princípios que tornam essa comunicação possível.</p>
         `
     },
-    'mac': {
-        title: 'Endereço MAC',
+    'introducao_redes_2': {
+        title: 'O Propósito da Conectividade',
         content: `
-            <h3>O que é?</h3>
-            <p>O endereço <span class="term" data-term="mac">MAC</span> (Media Access Control) é um identificador único atribuído a uma placa de rede (como Wi-Fi ou Ethernet) pelo fabricante. É um endereço físico, gravado no hardware.</p>
-            <h3>Como Funciona?</h3>
-            <p>Ele opera na Camada 2 (Enlace) do modelo OSI e é usado para a comunicação entre dispositivos na mesma rede local (mesmo segmento). Switches usam endereços MAC para encaminhar quadros (frames) para a porta correta.</p>
+            <h3>Compartilhamento de Recursos e Informações</h3>
+            <p>O principal objetivo de uma rede é otimizar o uso de recursos e facilitar a colaboração. Entre os principais benefícios, destacam-se:</p>
             <ul>
-                <li><strong>Formato:</strong> É um número hexadecimal de 48 bits, geralmente escrito como seis pares de caracteres separados por dois pontos ou hífens (ex: 00:1A:2B:3C:4D:5E).</li>
-                <li><strong>IP vs. MAC:</strong> O endereço <span class="term" data-term="ip">IP</span> te localiza na internet (endereço de cidade/rua), enquanto o endereço <span class="term" data-term="mac">MAC</span> te identifica na sua vizinhança imediata (endereço da sua casa específica naquela rua).</li>
+                <li><strong>Dados e Informações:</strong> A troca de informações é a razão primária para a existência de uma rede.</li>
+                <li><strong>Recursos de Hardware:</strong> Equipamentos como impressoras, scanners e sistemas de armazenamento podem ser acessados por múltiplos usuários, reduzindo custos.</li>
+                <li><strong>Recursos de Software:</strong> Aplicações e sistemas podem ser centralizados em um servidor, simplificando a gestão e o acesso.</li>
+                <li><strong>Acesso à Internet:</strong> Uma única conexão com a internet pode ser distribuída de forma segura para todos os dispositivos em uma rede local.</li>
             </ul>
         `
     },
-    'gateway': {
-        title: 'Gateway Padrão',
+    'introducao_redes_3': {
+        title: 'Desenhando a Rede: Topologias',
         content: `
-            <h3>O que é?</h3>
-            <p>O <span class="term" data-term="gateway">Gateway</span> Padrão (Default Gateway) é o dispositivo em uma rede, geralmente um roteador, que serve como a "porta de saída" para todas as outras redes, incluindo a internet.</p>
-            <h3>Como Funciona?</h3>
-            <p>Quando seu computador quer enviar dados para um dispositivo fora da sua rede local (por exemplo, para acessar um site), ele não sabe o caminho. Então, ele envia o pacote para o Gateway Padrão. O gateway, por sua vez, sabe como encaminhar esse pacote para a internet.</p>
-            <p>Sem um gateway configurado, seus dispositivos só poderiam se comunicar com outros dispositivos na mesma rede local.</p>
-            <p><strong>Analogia:</strong> Imagine sua casa como sua rede local. Para enviar uma carta para outra cidade (outra rede), você não a joga pela janela. Você a entrega ao carteiro ou a coloca na caixa de correio (o gateway), que é o responsável por iniciar o processo de envio para fora do seu bairro.</p>
+            <h3>O que é Topologia de Rede?</h3>
+            <p>Topologia refere-se ao mapa ou arranjo de uma rede. Ela descreve como os dispositivos estão interconectados, tanto do ponto de vista físico (a disposição dos cabos) quanto lógico (o fluxo dos dados).</p>
+            <h4>Principais Tipos:</h4>
+            <ul>
+                <li><strong>Estrela (Star):</strong> A mais comum hoje em dia. Todos os dispositivos se conectam a um ponto central, como um switch. A falha em um cabo afeta apenas um único dispositivo, tornando a rede mais resiliente.</li>
+                <li><strong>Malha (Mesh):</strong> Oferece alta redundância, pois cada dispositivo se conecta a vários outros. É fundamental para a estabilidade do núcleo da internet.</li>
+                <li><strong>Barramento (Bus):</strong> Uma topologia mais antiga onde todos os dispositivos compartilham um cabo principal. Era simples, mas uma falha no cabo paralisava toda a rede.</li>
+                <li><strong>Anel (Ring):</strong> Os dispositivos formam um circuito fechado, com os dados passando de um nó para o outro em sequência.</li>
+            </ul>
         `
     },
-    'tcp': {
-        title: 'TCP (Transmission Control Protocol)',
+    'introducao_redes_4': {
+        title: 'Conhecendo os Equipamentos',
         content: `
-            <h3>O que é?</h3>
-            <p>O <span class="term" data-term="tcp">TCP</span> é um dos principais protocolos da internet. Ele funciona na Camada 4 (Transporte) e garante uma comunicação confiável, ordenada e com verificação de erros entre aplicações.</p>
-            <h3>Como Funciona?</h3>
-            <p>O TCP é "orientado à conexão", o que significa que ele estabelece uma conexão antes de enviar os dados. Isso é feito através de um processo chamado "Three-Way Handshake":</p>
+            <h3>Os Pilares da Conectividade</h3>
+            <ul>
+                <li><strong>Roteador (Router):</strong> O "cérebro" da operação, responsável por conectar redes distintas (como sua rede local e a internet) e decidir o melhor caminho para os dados.</li>
+                <li><strong>Switch:</strong> O gestor de tráfego da rede local (LAN). Ele direciona os dados de forma inteligente, entregando-os apenas ao dispositivo de destino correto, o que otimiza a comunicação.</li>
+                <li><strong>Access Point (AP):</strong> A porta de entrada para o mundo sem fio, permitindo que smartphones, notebooks e outros dispositivos se conectem à rede via Wi-Fi.</li>
+                <li><strong>Firewall:</strong> O "segurança" da sua rede. Ele atua como uma barreira, monitorando e filtrando o tráfego com base em regras predefinidas para proteger contra ameaças externas.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_5': {
+        title: 'Classificação por Escala',
+        content: `
+            <h3>Classificação por Abrangência Geográfica</h3>
+            <p>As redes são categorizadas com base em seu tamanho e alcance geográfico:</p>
+            <ul>
+                <li><strong>LAN (Local Area Network):</strong> Rede de Área Local. Cobre uma área restrita como uma residência, escritório ou um único edifício.</li>
+                <li><strong>WLAN (Wireless Local Area Network):</strong> Essencialmente uma LAN que utiliza tecnologia sem fio (Wi-Fi) para conectar dispositivos.</li>
+                <li><strong>MAN (Metropolitan Area Network):</strong> Rede de Área Metropolitana. Interconecta redes dentro de uma cidade ou um grande campus.</li>
+                <li><strong>WAN (Wide Area Network):</strong> Rede de Área Ampla. Conecta redes geograficamente distantes, podendo abranger países ou continentes. A internet é o maior exemplo de uma WAN.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_6': {
+        title: 'IPs: Endereços Públicos vs. Privados',
+        content: `
+            <h3>A Dupla Identidade na Rede</h3>
+            <p>Todo dispositivo na internet possui um endereço IP, mas eles se dividem em duas categorias cruciais:</p>
+            <p><strong>IP Público:</strong> É o seu endereço "oficial" na internet, único em todo o mundo, fornecido pelo seu Provedor de Serviços de Internet (ISP). É através dele que o mundo exterior se comunica com sua rede.</p>
+            <p><strong>IP Privado:</strong> Utilizado internamente na sua rede local (LAN), em faixas reservadas como <code>192.168.x.x</code> ou <code>10.x.x.x</code>. Esses endereços não são roteáveis na internet e permitem que vários dispositivos compartilhem um único IP público através de um processo chamado <strong>NAT (Network Address Translation)</strong>.</p>
+        `
+    },
+    'introducao_redes_7': {
+        title: 'A Função da Máscara de Sub-rede',
+        content: `
+            <h3>O que é a Máscara de Sub-rede?</h3>
+            <p>A máscara de sub-rede é um número de 32 bits que funciona como um divisor para um endereço IP, separando-o em duas partes: o identificador da rede e o identificador do host. Ela informa aos dispositivos qual parte do IP representa a "vizinhança" (a rede) e qual parte identifica o "lote" específico (o dispositivo).</p>
+            <p>Por exemplo, para o IP <code>192.168.1.10</code> com a máscara <code>255.255.255.0</code>, a máscara define que <code>192.168.1</code> é a rede, enquanto <code>10</code> é o host. Dispositivos na mesma rede se comunicam diretamente; para falar com o mundo exterior, eles precisam de um roteador.</p>
+        `
+    },
+    'introducao_redes_8': {
+        title: 'Protocolos: A Linguagem da Rede',
+        content: `
+            <h3>As Regras da Comunicação Digital</h3>
+            <p>Protocolos são conjuntos de regras formais que ditam como os dados devem ser formatados, transmitidos e recebidos. São como os idiomas e as gramáticas que permitem que dispositivos de diferentes fabricantes se comuniquem sem mal-entendidos.</p>
+            <h4>Protocolos Essenciais:</h4>
+            <ul>
+                <li><strong>IP (Internet Protocol):</strong> O protocolo base, responsável pelo sistema de endereçamento lógico e pelo roteamento de pacotes entre redes.</li>
+                <li><strong>TCP (Transmission Control Protocol):</strong> Focado em confiabilidade. Garante que os dados cheguem integralmente, na ordem correta, e com confirmação. Usado para e-mails, navegação web e transferências de arquivos.</li>
+                <li><strong>UDP (User Datagram Protocol):</strong> Focado em velocidade. Envia os dados rapidamente, sem a sobrecarga da verificação de entrega. Ideal para streaming, jogos online e chamadas de voz.</li>
+                <li><strong>HTTP (Hypertext Transfer Protocol):</strong> O alicerce da World Wide Web, utilizado para carregar páginas e recursos da internet.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_9': {
+        title: 'Anatomia de uma Rede',
+        content: `
+            <h3>Os Blocos de Construção da Conectividade</h3>
+            <p>Nesta aula, consolidamos os componentes que formam uma rede funcional e robusta:</p>
+            <ul>
+                <li><strong>Componentes Físicos (Hardware):</strong> A base tangível da rede, incluindo placas de rede (NICs), cabos (UTP, fibra), switches, roteadores e access points.</li>
+                <li><strong>Componentes Lógicos (Software):</strong> A inteligência que opera sobre o hardware, como sistemas operacionais de rede (Cisco IOS, RouterOS), os protocolos do conjunto TCP/IP, drivers e as aplicações que utilizamos (navegadores, etc.).</li>
+            </ul>
+            <p>A harmonia entre hardware e software é o que permite que a comunicação de dados flua de maneira eficiente e segura.</p>
+        `
+    },
+    'introducao_redes_10': {
+        title: 'DNS: A Agenda de Contatos da Web',
+        content: `
+            <h3>DNS: O Tradutor da Internet</h3>
+            <p>O DNS (Domain Name System) é um sistema hierárquico e distribuído globalmente que funciona como a "agenda de contatos" da internet. Sua função primordial é traduzir nomes de domínio amigáveis para humanos (ex: <code>www.google.com</code>) nos endereços IP numéricos que as máquinas utilizam para se localizar (ex: <code>142.250.218.100</code>).</p>
+            <p>Sem o DNS, a navegação na web como a conhecemos seria impossível, pois exigiriam que memorizássemos sequências numéricas complexas para cada serviço online.</p>
+        `
+    },
+    'introducao_redes_11': {
+        title: 'Modelo OSI: As 7 Camadas',
+        content: `
+            <h3>O Guia para a Comunicação de Rede</h3>
+            <p>O Modelo OSI (Open Systems Interconnection) é um modelo de referência que padroniza as funções de uma rede em sete camadas lógicas. Ele nos ajuda a visualizar e a entender o processo de comunicação de ponta a ponta, desde o meio físico até a aplicação final.</p>
             <ol>
-                <li><strong>SYN:</strong> O cliente envia um pacote "SYN" (sincronizar) para o servidor para iniciar uma conexão.</li>
-                <li><strong>SYN-ACK:</strong> O servidor responde com um pacote "SYN-ACK" (sincronizar-reconhecer) para confirmar que recebeu o pedido.</li>
-                <li><strong>ACK:</strong> O cliente responde com um "ACK" (reconhecer), e a conexão é estabelecida.</li>
+                <li><strong>Camada 7 - Aplicação:</strong> Interface com o usuário final (HTTP, FTP, SMTP).</li>
+                <li><strong>Camada 6 - Apresentação:</strong> Tradução de dados, criptografia e compressão.</li>
+                <li><strong>Camada 5 - Sessão:</strong> Gerenciamento do diálogo e da conexão entre aplicações.</li>
+                <li><strong>Camada 4 - Transporte:</strong> Entrega confiável ou rápida dos dados (TCP/UDP).</li>
+                <li><strong>Camada 3 - Rede:</strong> Endereçamento lógico (IP) e determinação do melhor caminho (roteamento).</li>
+                <li><strong>Camada 2 - Enlace:</strong> Endereçamento físico (MAC) e controle de acesso ao meio físico.</li>
+                <li><strong>Camada 1 - Física:</strong> Transmissão dos bits através do meio (cabos, fibra, ondas de rádio).</li>
             </ol>
-            <p>Após a conexão, o TCP divide os dados em segmentos, numera-os e os envia. O receptor confirma o recebimento de cada segmento. Se algum se perder, ele é reenviado. É usado para emails, downloads de arquivos e navegação na web, onde a integridade dos dados é crucial.</p>
         `
     },
-    'dhcp': {
-        title: 'DHCP (Dynamic Host Configuration Protocol)',
+    'introducao_redes_12': {
+        title: 'O Papel dos Servidores',
         content: `
-            <h3>O que é?</h3>
-            <p>O <span class="term" data-term="dhcp">DHCP</span> é um protocolo que automatiza a atribuição de endereços <span class="term" data-term="ip">IP</span> e outras configurações de rede (como máscara de sub-rede, <span class="term" data-term="gateway">gateway</span> e <span class="term" data-term="dns">DNS</span>) para os dispositivos em uma rede.</p>
-            <h3>Como Funciona?</h3>
-            <p>Ele elimina a necessidade de configurar cada dispositivo manualmente. O processo, conhecido como DORA, ocorre em quatro passos:</p>
+            <h3>Servidores Comuns em uma Infraestrutura</h3>
+            <p>Um servidor é um computador ou software dedicado a fornecer serviços para outros computadores, conhecidos como clientes. Alguns tipos essenciais são:</p>
             <ul>
-                <li><strong>Discover:</strong> O dispositivo cliente, ao entrar na rede, envia uma mensagem de broadcast perguntando "Existe algum servidor DHCP aí?".</li>
-                <li><strong>Offer:</strong> Servidores DHCP na rede respondem com uma oferta de um endereço IP.</li>
-                <li><strong>Request:</strong> O cliente escolhe uma das ofertas e envia uma requisição, pedindo para usar aquele endereço IP.</li>
-                <li><strong>Acknowledge:</strong> O servidor finaliza o processo com um reconhecimento (ACK), confirmando a concessão do endereço por um determinado período de tempo (lease).</li>
+                <li><strong>Servidor de Arquivos:</strong> Armazena e gerencia o acesso a arquivos de forma centralizada (Ex: Samba/NFS).</li>
+                <li><strong>Servidor Web:</strong> Hospeda sites e aplicações acessíveis via navegador (Ex: Apache, Nginx).</li>
+                <li><strong>Servidor de E-mail:</strong> Gerencia todo o fluxo de correio eletrônico (Ex: Postfix, Exchange).</li>
+                <li><strong>Servidor DNS:</strong> Fornece o serviço de resolução de nomes de domínio para a rede.</li>
+                <li><strong>Servidor DHCP:</strong> Automatiza a distribuição de endereços IP e outras configurações de rede.</li>
             </ul>
         `
     },
-    'dns': {
-        title: 'DNS (Domain Name System)',
+    'introducao_redes_13': {
+        title: 'VPN: Seu Túnel Seguro',
         content: `
-            <h3>O que é?</h3>
-            <p>O <span class="term" data-term="dns">DNS</span> é frequentemente chamado de "lista telefônica da internet". Sua função é traduzir nomes de domínio fáceis de lembrar (como www.google.com) para os endereços <span class="term" data-term="ip">IP</span> numéricos (como 172.217.28.14) que os computadores usam para se comunicar.</p>
-            <h3>Como Funciona?</h3>
-            <p>Quando você digita um endereço de site no seu navegador:</p>
+            <h3>VPN: Navegação Segura e Privada</h3>
+            <p>Uma VPN (Virtual Private Network) é uma tecnologia que estabelece uma conexão segura e criptografada sobre uma rede pública, como a internet. Ela cria um "túnel" privado virtual que protege seus dados contra interceptação e espionagem.</p>
+            <h4>Principais Aplicações:</h4>
+            <ul>
+                <li><strong>Acesso Remoto Corporativo:</strong> Permite que funcionários acessem a rede da empresa de forma segura de qualquer lugar.</li>
+                <li><strong>Proteção em Redes Públicas:</strong> Garante a segurança dos seus dados ao usar redes Wi-Fi de aeroportos, hotéis e cafés.</li>
+                <li><strong>Privacidade Online:</strong> Mascara seu endereço IP real, protegendo sua identidade e localização.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_14': {
+        title: 'DMZ: A Zona de Segurança',
+        content: `
+            <h3>DMZ: A Zona Desmilitarizada da Rede</h3>
+            <p>Em segurança de redes, uma DMZ (Demilitarized Zone) é uma sub-rede de perímetro que fica isolada entre a sua rede interna confiável (LAN) e a rede externa não confiável (Internet). Seu propósito é adicionar uma camada extra de proteção.</p>
+            <p>Servidores que precisam de acesso público, como servidores web, de e-mail ou DNS, são posicionados na DMZ. Dessa forma, se um desses servidores for comprometido, o ataque fica contido na DMZ, sem acesso direto à rede interna crítica, que é protegida por um segundo firewall.</p>
+        `
+    },
+    'introducao_redes_15': {
+        title: 'Proxy: O Intermediário Inteligente',
+        content: `
+            <h3>O que é um Servidor Proxy?</h3>
+            <p>Um servidor proxy atua como um intermediário entre os dispositivos da sua rede e a internet. Em vez de se conectar diretamente a um site, sua requisição passa primeiro pelo proxy, que então a encaminha ao destino.</p>
+            <h4>Principais Funções:</h4>
+            <ul>
+                <li><strong>Filtragem de Conteúdo:</strong> Usado por empresas para controlar o acesso a sites e serviços, aumentando a produtividade e a segurança.</li>
+                <li><strong>Cache:</strong> Armazena cópias de páginas e arquivos acessados com frequência para acelerar o acesso para outros usuários e economizar banda.</li>
+                <li><strong>Segurança e Privacidade:</strong> Oculta os endereços IP dos clientes, adicionando uma camada de anonimato.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_16': {
+        title: 'Acesso Remoto: SSH vs. Telnet',
+        content: `
+            <h3>Gerenciamento à Distância</h3>
+            <p>Tanto SSH quanto Telnet são protocolos para acessar e gerenciar dispositivos de rede (roteadores, switches, servidores) remotamente via linha de comando. A diferença entre eles é crucial para a segurança.</p>
+            <ul>
+                <li><strong>Telnet:</strong> Um protocolo antigo que transmite todos os dados, incluindo credenciais de login, em <strong>texto puro</strong>. É extremamente vulnerável a interceptações e seu uso é obsoleto e perigoso.</li>
+                <li><strong>SSH (Secure Shell):</strong> O padrão atual para acesso remoto seguro. Ele <strong>criptografa</strong> toda a comunicação, garantindo a confidencialidade e a integridade dos dados trocados. Sempre opte pelo SSH.</li>
+            </ul>
+        `
+    },
+    'introducao_redes_17': {
+        title: 'Firewall: O Guardião Digital',
+        content: `
+            <h3>A Barreira de Proteção da Sua Rede</h3>
+            <p>Um firewall é um dispositivo ou software de segurança que monitora e controla o tráfego de rede com base em um conjunto de regras. Ele atua como um porteiro entre sua rede interna confiável e redes externas não confiáveis, como a internet.</p>
+            <p>Sua função é ser a primeira linha de defesa, bloqueando acessos não autorizados, prevenindo ataques e garantindo que apenas o tráfego legítimo possa entrar ou sair da rede. É um componente indispensável em qualquer estratégia de segurança.</p>
+        `
+    },
+    'introducao_redes_18': {
+        title: 'Entendendo o CGNAT',
+        content: `
+            <h3>O que é CGNAT?</h3>
+            <p>CGNAT (Carrier-Grade NAT) é uma técnica de NAT em larga escala usada por provedores de internet (ISPs) para contornar a escassez de endereços IPv4. Com o CGNAT, o provedor compartilha um único endereço IP público entre centenas ou até milhares de clientes simultaneamente.</p>
+            <p>Para o usuário final, isso significa que o endereço IP na porta WAN do seu roteador é, na verdade, um IP privado (geralmente na faixa <code>100.64.0.0/10</code>). Embora transparente para a navegação comum, o CGNAT pode complicar o uso de aplicações que dependem de conexões de entrada, como jogos online, acesso remoto a câmeras ou hospedagem de servidores.</p>
+        `
+    },
+    'introducao_redes_19': {
+        title: 'Ping: O Teste de Conexão',
+        content: `
+            <h3>Verificando a Conectividade Essencial</h3>
+            <p>O comando <code>ping</code> é a ferramenta de diagnóstico mais básica e essencial em redes. Ele utiliza o protocolo ICMP para enviar um pacote de "solicitação de eco" a um destino e aguardar por uma "resposta de eco".</p>
+            <p>Com ele, podemos verificar rapidamente três aspectos fundamentais:</p>
+            <ul>
+                <li><strong>Alcançabilidade:</strong> Confirma se o dispositivo de destino está ativo e acessível na rede.</li>
+                <li><strong>Latência:</strong> Mede o tempo de ida e volta da comunicação (round-trip time), geralmente em milissegundos (ms).</li>
+                <li><strong>Perda de Pacotes:</strong> Indica se algum pacote se perdeu durante o trajeto.</li>
+            </ul>
+            <pre><code>ping 8.8.8.8</code></pre>
+        `
+    },
+    'introducao_redes_20': {
+        title: 'Modos de Roteador: Router vs. Bridge',
+        content: `
+            <h3>Modos de Operação do Roteador</h3>
+            <p>A maioria dos roteadores domésticos pode operar em dois modos distintos:</p>
+            <p><strong>Modo Roteador (Padrão):</strong> Nesta configuração, o dispositivo atua como um roteador completo. Ele gerencia a conexão WAN (internet), cria uma rede local (LAN) separada, distribui IPs via DHCP, e realiza o NAT para permitir o acesso à internet.</p>
+            <p><strong>Modo Bridge / Access Point:</strong> Neste modo, as funções de roteamento (NAT, DHCP) são desativadas. O aparelho funciona como uma extensão da rede existente, agindo como um "switch com Wi-Fi". É a escolha ideal quando você deseja usar um segundo roteador apenas para ampliar a cobertura do sinal sem criar uma nova rede conflitante.</p>
+        `
+    },
+    'introducao_redes_21': {
+        title: 'A Arte de Crimpar Cabos',
+        content: `
+            <h3>Padrões de Crimpagem T568A e T568B</h3>
+            <p>Crimpar um cabo de rede significa fixar um conector RJ-45 na ponta de um cabo de par trançado (UTP). Para que a conexão funcione, os pares de fios coloridos devem ser inseridos em uma ordem específica. Existem dois padrões principais:</p>
+            <ul>
+                <li><strong>T568B:</strong> É o padrão mais comum globalmente e no Brasil. A sequência de cores é: Branco/Laranja, Laranja, Branco/Verde, Azul, Branco/Azul, Verde, Branco/Marrom, Marrom.</li>
+                <li><strong>T568A:</strong> A sequência troca os pares verde e laranja de lugar: Branco/Verde, Verde, Branco/Laranja, Azul, Branco/Azul, Laranja, Branco/Marrom, Marrom.</li>
+            </ul>
+            <p>Para um <strong>cabo direto</strong> (ligar um PC a um switch), use o mesmo padrão nas duas pontas (geralmente T568B). Para um <strong>cabo cruzado (crossover)</strong> (ligar dispositivos iguais, como PC-PC), use T568A em uma ponta e T568B na outra. Atualmente, a maioria dos equipamentos modernos possui a função Auto-MDIX, que detecta e se ajusta ao tipo de cabo automaticamente.</p>
+        `
+    },
+    'eve_ng_1': {
+        title: 'Instalando o EVE-NG',
+        content: `
+            <h3>Preparando Seu Laboratório Virtual</h3>
+            <p>O EVE-NG (Emulated Virtual Environment - Next Generation) é uma plataforma de emulação de redes que nos permite criar topologias complexas com equipamentos virtuais de diversos fabricantes. É a ferramenta ideal para praticar sem a necessidade de hardware físico caro.</p>
+            <h4>Passos da Instalação:</h4>
             <ol>
-                <li>Seu computador pergunta ao servidor DNS (geralmente fornecido pelo seu provedor de internet): "Qual é o IP de www.google.com?".</li>
-                <li>O servidor DNS procura em seus registros ou pergunta a outros servidores DNS até encontrar a resposta.</li>
-                <li>O servidor DNS retorna o endereço IP para o seu computador.</li>
-                <li>Seu navegador usa esse IP para se conectar ao servidor do site e carregar a página.</li>
+                <li>Faça o download da imagem do EVE-NG Community Edition do site oficial. Normalmente, ela é distribuída no formato OVA.</li>
+                <li>Você precisará de um software de virtualização, como o VMware Workstation Player (gratuito) ou VirtualBox.</li>
+                <li>No seu software de virtualização, use a opção de importar ("Import Appliance") e selecione o arquivo OVA baixado.</li>
+                <li>Siga o assistente de importação. É fundamental que seu computador possua recursos suficientes (recomenda-se no mínimo 8GB de RAM e 4 núcleos de CPU) e que a virtualização de hardware (VT-x/AMD-V) esteja habilitada na BIOS.</li>
             </ol>
-            <p>Sem o DNS, teríamos que memorizar os endereços IP de todos os sites que queremos visitar.</p>
         `
     },
-    'http': {
-        title: 'HTTP (Hypertext Transfer Protocol)',
+    'eve_ng_2': {
+        title: 'Primeiros Passos e Soluções',
         content: `
-            <h3>O que é?</h3>
-            <p>HTTP é o protocolo fundamental da World Wide Web. É a base da comunicação de dados na internet, definindo como as mensagens são formatadas e transmitidas entre os navegadores (clientes) e os servidores web.</p>
-            <h3>Como Funciona?</h3>
-            <p>Ele segue um modelo de requisição-resposta. O cliente (seu navegador) envia uma requisição HTTP para o servidor (onde o site está hospedado). Exemplos de requisições incluem:</p>
-            <ul>
-                <li><strong>GET:</strong> Solicita a busca de um recurso (como uma página HTML ou uma imagem).</li>
-                <li><strong>POST:</strong> Envia dados para o servidor para serem processados (como preencher um formulário de login).</li>
-            </ul>
-            <p>O servidor processa a requisição e envia de volta uma resposta HTTP, que contém o status da requisição (ex: "200 OK" ou "404 Not Found") e o conteúdo solicitado.</p>
-            <h4>HTTPS</h4>
-            <p>HTTPS é a versão segura do HTTP. Ele adiciona uma camada de criptografia (SSL/TLS) para proteger os dados trocados, essencial para transações bancárias, logins e qualquer comunicação sensível.</p>
-        `
-    },
-    'vlan': {
-        title: 'VLAN (Virtual LAN)',
-        content: `
-            <h3>O que é?</h3>
-            <p>Uma <span class="term" data-term="vlan">VLAN</span> (Rede Local Virtual) é uma forma de dividir logicamente uma rede física em múltiplas redes de broadcast separadas. Dispositivos na mesma VLAN se comunicam como se estivessem no mesmo switch, mesmo que estejam fisicamente conectados a switches diferentes.</p>
-            <h3>Como Funciona?</h3>
-            <p>Em um switch gerenciável, as portas são atribuídas a IDs de VLAN específicos. O tráfego de uma VLAN é isolado das outras. Para que o tráfego de múltiplas VLANs possa passar por um único cabo entre switches (um link "trunk"), os pacotes são "etiquetados" (tagged) com seu ID de VLAN. O switch de destino lê a etiqueta e encaminha o pacote apenas para as portas daquela VLAN.</p>
-            <h4>Benefícios:</h4>
-            <ul>
-                <li><strong>Segurança:</strong> Isola grupos de usuários (ex: Finanças e Vendas) mesmo que estejam na mesma rede física.</li>
-                <li><strong>Performance:</strong> Reduz o domínio de broadcast, diminuindo tráfego desnecessário na rede.</li>
-                <li><strong>Flexibilidade:</strong> Permite agrupar usuários por departamento, não por localização física.</li>
-            </ul>
-        `
-    },
-    'vpn': {
-        title: 'VPN (Virtual Private Network)',
-        content: `
-            <h3>O que é?</h3>
-            <p>Uma VPN (Rede Privada Virtual) cria uma conexão segura e criptografada sobre uma rede pública, como a internet. Ela age como um "túnel" seguro para proteger seus dados de interceptação.</p>
-            <h3>Como Funciona?</h3>
-            <p>Quando você se conecta a uma VPN, seu tráfego de internet é redirecionado através de um servidor remoto operado pelo provedor de VPN. A conexão entre seu dispositivo e o servidor é criptografada. Isso tem dois efeitos principais:</p>
+            <h3>Primeiro Acesso e Configuração</h3>
+            <p>Após importar a VM, inicie-a. A tela do console exibirá o endereço IP que o EVE-NG obteve da sua rede local.</p>
             <ol>
-                <li><strong>Segurança:</strong> A criptografia impede que hackers, seu provedor de internet ou governos espionem seus dados, mesmo que você esteja usando uma rede Wi-Fi pública e insegura.</li>
-                <li><strong>Privacidade e Acesso:</strong> Seu endereço IP real é ocultado e substituído pelo IP do servidor VPN. Isso permite contornar restrições geográficas de conteúdo e aumenta seu anonimato online.</li>
+                <li>Baixe e instale o PuTTY, um cliente SSH para Windows.</li>
+                <li>Abra o PuTTY, digite o endereço IP do EVE-NG, verifique se a porta é 22 e a conexão é SSH, e clique em "Open".</li>
+                <li>O login padrão é <strong>root</strong> com a senha <strong>eve</strong>. No primeiro acesso, um script de configuração será executado para que você defina uma nova senha, fuso horário, etc.</li>
+                <li><strong>Solução de Problemas Comuns:</strong> Se os dispositivos (nós) no seu laboratório não iniciarem, o problema mais comum é a falta de "virtualização aninhada". Desligue a VM do EVE-NG, acesse suas configurações, vá para a seção de CPU e habilite a opção "Virtualize Intel VT-x/EPT or AMD-V/RVI".</li>
             </ol>
-            <p><strong>Analogia:</strong> Usar a internet sem VPN é como enviar um cartão postal; qualquer um no caminho pode ler. Usar uma VPN é como enviar esse mesmo cartão dentro de um cofre-forte blindado.</p>
         `
     },
-    'snmp': {
-        title: 'SNMP (Simple Network Management Protocol)',
+    'eve_ng_3': {
+        title: 'Adicionando o Mikrotik ao Lab',
         content: `
-            <h3>O que é?</h3>
-            <p>SNMP é um protocolo padrão da internet usado para gerenciar e monitorar dispositivos em uma rede. Ele permite que administradores de rede monitorem a saúde da rede, gerenciem dispositivos e identifiquem problemas.</p>
-            <h3>Como Funciona?</h3>
-            <p>A arquitetura SNMP é composta por três componentes principais:</p>
-            <ul>
-                <li><strong>Gerente (Manager):</strong> Um sistema central (geralmente um servidor) que monitora a rede.</li>
-                <li><strong>Agente (Agent):</strong> Um software que roda em cada dispositivo gerenciado (roteadores, switches, servidores) e coleta informações.</li>
-                <li><strong>MIB (Management Information Base):</strong> Um banco de dados no agente que organiza as informações do dispositivo. O gerente pode ler ou alterar essas informações.</li>
-            </ul>
-            <p>O gerente pode "perguntar" (GET) ao agente sobre o status de um dispositivo (ex: "Qual o uso da CPU?") ou o agente pode enviar alertas proativamente (TRAPs) ao gerente se algo anormal acontecer (ex: uma porta caiu).</p>
-        `
-    },
-    'cidr': {
-        title: 'CIDR (Classless Inter-Domain Routing)',
-        content: `
-            <h3>O que é?</h3>
-            <p>CIDR, ou Roteamento Interdomínio sem Classes, é o método moderno para alocar endereços IP e especificar máscaras de sub-rede. Ele substituiu o antigo sistema de "classes" de redes (A, B, C), que era muito inflexível e desperdiçava endereços.</p>
-            <h3>Como Funciona?</h3>
-            <p>O CIDR usa a "notação de barra" para representar a máscara de sub-rede. Um endereço IP é seguido por uma barra (/) e um número. Esse número indica quantos bits do endereço são a parte da rede.</p>
-            <ul>
-                <li><strong>Exemplo:</strong> <code>192.168.1.0/24</code></li>
-                <li><code>192.168.1.0</code> é o endereço da rede.</li>
-                <li><code>/24</code> significa que os primeiros 24 bits são para a rede. Isso corresponde a uma máscara de sub-rede de <code>255.255.255.0</code>.</li>
-            </ul>
-            <p>Essa notação permite a criação de sub-redes de tamanhos muito mais variados e específicos, otimizando o uso do espaço de endereçamento IP. Por exemplo, uma rede <code>/30</code> permite apenas 2 hosts, ideal para um link ponto-a-ponto.</p>
-        `
-    },
-    'pppoe': {
-        title: 'PPPoE (Point-to-Point Protocol over Ethernet)',
-        content: `
-            <h3>O que é?</h3>
-            <p>PPPoE é um protocolo de rede que encapsula o PPP (Point-to-Point Protocol) dentro de quadros Ethernet. É amplamente utilizado por provedores de internet (ISPs) para conectar clientes de banda larga (como DSL e fibra) à internet.</p>
-            <h3>Como Funciona?</h3>
-            <p>Ele permite que uma única conexão física (o cabo Ethernet) seja usada para estabelecer múltiplas sessões lógicas. O principal uso é para autenticação, medição e gerenciamento de contas de usuários.</p>
+            <h3>Adicionando Imagens de Dispositivos</h3>
+            <p>O EVE-NG é uma plataforma vazia; precisamos adicionar as imagens dos sistemas operacionais de rede. Para adicionar o Mikrotik CHR (Cloud Hosted Router):</p>
             <ol>
-                <li><strong>Descoberta (Discovery):</strong> O roteador do cliente (PPPoE Client) envia uma mensagem de broadcast para encontrar o servidor do provedor (PPPoE Server, ou Access Concentrator).</li>
-                <li><strong>Sessão (Session):</strong> Após a descoberta, uma sessão PPP é estabelecida. O cliente envia um nome de usuário e senha para autenticação.</li>
-                <li><strong>Conexão:</strong> Se a autenticação for bem-sucedida, o servidor do provedor atribui um endereço IP público ao cliente, permitindo o acesso à internet.</li>
+                <li>No site da Mikrotik, baixe a imagem do CHR no formato "qcow2".</li>
+                <li>Use um cliente SFTP como o WinSCP para se conectar ao EVE-NG (use o IP, usuário 'root' e sua nova senha).</li>
+                <li>Navegue até o diretório <code>/opt/unetlab/addons/qemu/</code>.</li>
+                <li>Crie uma nova pasta seguindo o padrão de nomenclatura, por exemplo: <code>mikrotik-7.15</code>.</li>
+                <li>Envie o arquivo <code>.qcow2</code> para dentro desta nova pasta.</li>
+                <li>Renomeie o arquivo de imagem para <code>hda.qcow2</code>.</li>
+                <li>Finalmente, execute o comando de correção de permissões no terminal do EVE-NG (via PuTTY): <code>/opt/unetlab/wrappers/unl_wrapper -a fixpermissions</code>.</li>
             </ol>
-            <p><strong>Analogia:</strong> Pense no PPPoE como a "chamada de login" para a internet. Seu roteador disca para o provedor, fornece suas credenciais e, se tudo estiver correto, o provedor abre o portão para você navegar.</p>
+            <p>Após esses passos, o Mikrotik aparecerá na lista de nós disponíveis para adicionar ao seu laboratório.</p>
         `
     },
-    'zabbix': {
-        title: 'Monitoramento de Redes Críticas com Zabbix',
+    'eve_ng_4': {
+        title: 'Acesso com Winbox e Erros Comuns',
         content: `
-            <svg width="100%" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" style="background-color: #161f2d; border-radius: 8px; margin-bottom: 1.5rem;">
-              <style>
-                .line { stroke: #3a4c66; stroke-width: 2; }
-                .node-bg { fill: var(--bg-light); stroke: var(--border-color); stroke-width: 2; }
-                .node-text { font-family: 'Inter', sans-serif; font-size: 14px; fill: var(--text-secondary); text-anchor: middle; }
-                .status-ok { fill: #28a745; }
-                .status-warn { fill: #ffc107; }
-                .status-crit { fill: #dc3545; }
-                .console-text { font-family: 'Inter', sans-serif; font-size: 18px; fill: var(--accent-color); font-weight: 600; text-anchor: middle; }
-                .glow-crit { animation: pulse 1.5s infinite; }
-                @keyframes pulse { 0% { r: 6; opacity: 1; } 50% { r: 10; opacity: 0.5; } 100% { r: 6; opacity: 1; } }
-              </style>
-              <rect x="350" y="20" width="100" height="60" rx="8" class="node-bg" />
-              <text x="400" y="55" class="console-text">NOC</text>
-              <text x="400" y="75" class="node-text">(Zabbix)</text>
-              <line x1="400" y1="80" x2="100" y2="150" class="line" />
-              <line x1="400" y1="80" x2="250" y2="150" class="line" />
-              <line x1="400" y1="80" x2="400" y2="150" class="line" />
-              <line x1="400" y1="80" x2="550" y2="150" class="line" />
-              <line x1="400" y1="80" x2="700" y2="150" class="line" />
-              <rect x="60" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="100" y="175" class="node-text">Router-SP</text><circle cx="100" cy="210" r="6" class="status-ok" />
-              <rect x="210" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="250" y="175" class="node-text">Switch-Core</text><circle cx="250" cy="210" r="6" class="status-warn" />
-              <rect x="360" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="400" y="175" class="node-text">DB-Server</text><circle cx="400" cy="210" r="6" class="status-crit glow-crit" />
-              <rect x="510" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="550" y="175" class="node-text">Firewall</text><circle cx="550" cy="210" r="6" class="status-ok" />
-              <rect x="660" y="150" width="80" height="50" rx="5" class="node-bg" /><text x="700" y="175" class="node-text">AP-Corp</text><circle cx="700" cy="210" r="6" class="status-ok" />
-            </svg>
+            <h3>Solução de Problemas e Conexão</h3>
+            <p><strong>Problemas comuns ao adicionar imagens:</strong></p>
+            <ul>
+                <li><strong>Nomenclatura incorreta:</strong> Siga rigorosamente a convenção de nomes do EVE-NG. O arquivo de disco principal deve se chamar <code>hda.qcow2</code>.</li>
+                <li><strong>Permissões:</strong> Lembre-se de sempre executar o comando <code>fixpermissions</code> após adicionar ou modificar imagens.</li>
+            </ul>
+            <p><strong>Conectando com o Winbox:</strong></p>
+            <p>Para que o Winbox (no seu PC) se conecte a um Mikrotik virtual dentro do EVE-NG, você precisa criar uma ponte entre o laboratório e sua rede física.</p>
+            <ol>
+                <li>No laboratório, adicione um nó do tipo "Network".</li>
+                <li>Nas configurações deste nó, selecione o tipo "Management (Cloud0)". Isso cria uma ponte para a interface de rede do seu próprio computador.</li>
+                <li>Conecte um cabo virtual da porta <code>ether1</code> do seu Mikrotik a este nó "Cloud".</li>
+                <li>Inicie o Mikrotik. Agora ele estará na mesma rede que seu PC e poderá ser descoberto pelo Winbox através da aba "Neighbors" (via endereço MAC).</li>
+            </ol>
+        `
+    },
+    'mikrotik_1_1': {
+        title: 'Introdução ao RouterOS',
+        content: `
+            <h3>O que é Mikrotik?</h3>
+            <p>Mikrotik é uma empresa europeia (Letônia) que desenvolve software e hardware de rede. Seu produto mais famoso é o <strong>RouterOS</strong>, um sistema operacional versátil que transforma hardware dedicado (as RouterBOARDS) ou até mesmo um computador padrão em um roteador de nível profissional com funcionalidades de firewall, VPN, controle de banda, e muito mais. Devido ao seu excelente custo-benefício e flexibilidade, é amplamente utilizado por provedores de internet (ISPs) e empresas de todos os portes.</p>
+        `
+    },
+    'mikrotik_1_2': {
+        title: 'Interfaces de Gerenciamento',
+        content: `
+            <h3>Formas de Acesso ao RouterOS</h3>
+            <p>Existem múltiplas maneiras de configurar e gerenciar um dispositivo com RouterOS:</p>
+            <ul>
+                <li><strong>Winbox:</strong> A ferramenta gráfica oficial para Windows. É a forma mais popular e intuitiva de gerenciamento, permitindo conexão via IP ou endereço MAC.</li>
+                <li><strong>WebFig:</strong> Uma interface web completa, acessível digitando o endereço IP do dispositivo em um navegador.</li>
+                <li><strong>CLI (Command Line Interface):</strong> Acesso via terminal (SSH/Telnet), oferecendo poder máximo para automação, scripts e configurações avançadas.</li>
+                <li><strong>API:</strong> Permite a integração com sistemas e aplicações externas para gerenciamento automatizado.</li>
+            </ul>
+        `
+    },
+    'mikrotik_1_3': {
+        title: 'Configurando Endereços IP',
+        content: `
+            <h3>Atribuindo um Endereço IP</h3>
+            <p>Para que o roteador participe da rede, suas interfaces precisam de endereços IP. No RouterOS, um endereço IP é sempre configurado em uma interface específica e utiliza a notação CIDR para definir a máscara de sub-rede (ex: 192.168.1.1/24).</p>
+            <h4>Via Winbox:</h4>
+            <p>Navegue até <code>IP > Addresses</code>, clique no botão de adição (+), e preencha o campo "Address" (ex: <code>192.168.88.1/24</code>) e selecione a "Interface" (ex: <code>ether2</code>) onde o IP será aplicado.</p>
+            <h4>Via CLI:</h4>
+            <pre><code>/ip address add address=192.168.88.1/24 interface=ether2</code></pre>
+        `
+    },
+    'mikrotik_1_4': {
+        title: 'Gerenciamento de Usuários e Senhas',
+        content: `
+            <h3>Segurança Básica de Acesso</h3>
+            <p>A primeira ação em qualquer dispositivo Mikrotik novo é fortalecer a segurança de acesso.</p>
+            <h4>Alterar a Senha do Admin:</h4>
+            <p>O usuário padrão 'admin' não possui senha. É imperativo definir uma senha complexa imediatamente.</p>
+            <pre><code># Via CLI
+/password
+# Siga as instruções para definir a nova senha.</code></pre>
+            <h4>Criar Novos Usuários:</h4>
+            <p>É uma boa prática criar usuários distintos com diferentes níveis de permissão (ex: um usuário com acesso total e outro com acesso somente leitura para monitoramento).</p>
+            <pre><code># Criando um usuário com acesso total (full)
+/user add name=gerente group=full password=SenhaForte123
 
-            <h3>O que é Zabbix?</h3>
-            <p>Zabbix é uma das mais poderosas ferramentas de monitoramento de código aberto do mercado. Ele é capaz de monitorar praticamente qualquer coisa: performance e disponibilidade de servidores, dispositivos de rede, serviços, e até mesmo métricas de negócio. Em ambientes críticos, onde cada segundo de indisponibilidade pode custar caro, o Zabbix se torna uma peça central da operação de TI.</p>
-            
-            <h3>Conceitos Fundamentais</h3>
-            <p>Para dominar o Zabbix, é crucial entender seus componentes básicos:</p>
-            <ul>
-                <li><strong>Hosts:</strong> Qualquer dispositivo que você deseja monitorar (um servidor, roteador, switch, impressora, etc.).</li>
-                <li><strong>Itens (Items):</strong> Uma métrica específica que você coleta de um host. Por exemplo: uso de CPU, tráfego de uma interface de rede, ou a temperatura de um servidor.</li>
-                <li><strong>Triggers:</strong> Expressões lógicas que avaliam os dados coletados pelos Itens. Um trigger define um limiar de problema. Exemplo: "O uso da CPU do 'Servidor-WEB' está acima de 90% nos últimos 5 minutos". Quando essa condição é verdadeira, o trigger é ativado.</li>
-                <li><strong>Ações (Actions):</strong> Respostas automáticas a eventos, como a ativação de um trigger. Uma ação pode ser enviar um email, uma mensagem no Slack, executar um script para tentar resolver o problema, ou escalar o alerta para outro time.</li>
-                <li><strong>Templates:</strong> Modelos que agrupam Itens, Triggers e outros elementos. Em vez de configurar tudo para cada host, você pode criar um template "Servidor Linux" e aplicá-lo a todos os seus servidores, economizando um tempo imenso.</li>
-            </ul>
-
-            <h3>Monitorando Ambientes Críticos</h3>
-            <p>Em redes de missão crítica (como data centers, sistemas bancários, e telecomunicações), o monitoramento não é reativo, é preditivo e proativo. O objetivo é identificar problemas antes que eles impactem os usuários.</p>
-            <h4>Métricas Essenciais:</h4>
-            <ul>
-                <li><strong>Disponibilidade:</strong> O dispositivo está online? (Ping, SNMP checks).</li>
-                <li><strong>Performance de Links:</strong> Latência, jitter e perda de pacotes em links WAN.</li>
-                <li><strong>Saúde de Hardware:</strong> Uso de CPU, memória, temperatura e status de fontes/ventoinhas em equipamentos chave como roteadores core e firewalls.</li>
-                <li><strong>Tráfego e Erros:</strong> Utilização de banda, erros de CRC e descartes em interfaces críticas.</li>
-            </ul>
-
-            <h3>Garantindo Resposta Instantânea da Equipe de Campo</h3>
-            <p>A meta de ter uma equipe respondendo a um alerta crítico em menos de 10 minutos (e idealmente, quase instantaneamente) não depende apenas da velocidade das pessoas, mas sim da automação e da clareza do processo. A ferramenta é o gatilho, mas o processo garante a ação.</p>
-            <h4>Estratégia para Resposta Rápida:</h4>
+# Criando um usuário para monitoramento (read-only)
+/user add name=monitor group=read password=OutraSenha456</code></pre>
+        `
+    },
+    'mikrotik_1_5': {
+        title: 'Sincronizando o Horário com NTP',
+        content: `
+            <h3>Ajustando o Relógio do Sistema</h3>
+            <p>Manter o horário do roteador sincronizado é crucial para a precisão dos logs, agendamentos e a validação de certificados de segurança. O RouterOS pode atuar como um cliente NTP (Network Time Protocol) para sincronizar com servidores de tempo globais.</p>
+            <h4>Via Winbox:</h4>
             <ol>
-                <li><strong>Alertas Inteligentes e Contextualizados:</strong> Configure triggers com severidades diferentes (Informação, Atenção, Alta, Desastre). Evite o "ruído" de alertas de baixa prioridade para que os alertas críticos se destaquem. Um alerta deve dizer claramente qual o impacto do problema.</li>
-                <li><strong>Escalonamento Automatizado:</strong> Use as Ações do Zabbix para criar uma cadeia de comando. Se o analista N1 não reconhecer (Acknowledge) um alerta "Desastre" em 2 minutos, a Ação escala automaticamente para o N2. Se o N2 não responder em 5 minutos, escala para o gestor.</li>
-                <li><strong>Canais de Notificação Imediatos:</strong> Email é lento. Integre o Zabbix com ferramentas de comunicação instantânea como <strong>Slack, Microsoft Teams, Telegram ou PagerDuty</strong>. Essas ferramentas garantem que o alerta seja visto imediatamente, no celular da equipe de campo.</li>
-                <li><strong>Dashboards de NOC (Network Operation Center):</strong> Crie painéis visuais com os principais indicadores da rede. Um "mapa" da rede com cores (verde, amarelo, vermelho) em uma TV grande é a forma mais rápida de um time inteiro entender o status do ambiente.</li>
-                <li><strong>Anexar "Runbooks" aos Alertas:</strong> Cada alerta crítico deve vir acompanhado de um link para um procedimento operacional padrão (runbook). Isso elimina a necessidade do técnico pensar "o que eu faço agora?". O procedimento já está documentado, desde os comandos para diagnóstico até quem contatar.</li>
+                <li>Acesse <code>System > Clock</code> e configure o "Time Zone Name" para sua localização (ex: America/Sao_Paulo).</li>
+                <li>Acesse <code>System > NTP Client</code>.</li>
+                <li>Marque a caixa "Enabled".</li>
+                <li>Informe os servidores NTP nos campos designados, como <code>a.ntp.br</code>.</li>
+            </ol>
+            <h4>Via CLI:</h4>
+            <pre><code>/system clock set time-zone-name=America/Sao_Paulo
+/system ntp client set enabled=yes primary-ntp=a.ntp.br secondary-ntp=b.ntp.br</code></pre>
+        `
+    },
+    'mikrotik_1_6': {
+        title: 'Atualização e Downgrade do Sistema',
+        content: `
+            <h3>Mantendo o RouterOS em Dia</h3>
+            <p>Manter o sistema operacional atualizado é vital para obter novas funcionalidades, melhorias de desempenho e, principalmente, correções de vulnerabilidades de segurança.</p>
+            <h4>Upgrade:</h4>
+            <ol>
+                <li>No Winbox, vá para <code>System > Packages</code> e clique em "Check For Updates".</li>
+                <li>O sistema exibirá a versão atual e a mais recente. Clique em "Download&Install" para que o roteador baixe o pacote e reinicie para aplicar a atualização.</li>
+            </ol>
+            <h4>Downgrade:</h4>
+            <p>Caso uma nova versão apresente instabilidade, é possível reverter para a anterior.</p>
+            <ol>
+                <li>No site da Mikrotik, baixe o arquivo ".npk" da versão desejada na seção de arquivos (archive).</li>
+                <li>Arraste o arquivo <code>.npk</code> para a janela <code>Files</code> no Winbox.</li>
+                <li>Vá em <code>System > Packages</code> e clique em "Downgrade". O dispositivo irá reiniciar e instalar a versão contida no arquivo.</li>
             </ol>
         `
+    },
+    'mikrotik_1_7': {
+        title: 'Estratégias de Backup',
+        content: `
+            <h3>Salvando Suas Configurações</h3>
+            <p>O RouterOS oferece duas formas principais para salvar suas configurações, cada uma com um propósito diferente:</p>
+            <h4>1. Backup Binário (.backup):</h4>
+            <ul>
+                <li>Gerado através de <code>Files > Backup</code> no Winbox ou com o comando <code>/system backup save</code>.</li>
+                <li>Salva a configuração completa, incluindo senhas e chaves secretas.</li>
+                <li><strong>Prós:</strong> Restauração extremamente rápida e completa.</li>
+                <li><strong>Contras:</strong> Só pode ser restaurado no <strong>mesmo modelo de hardware</strong> e na <strong>mesma versão (ou superior)</strong> do RouterOS. O arquivo não é legível.</li>
+            </ul>
+            <h4>2. Exportação de Script (.rsc):</h4>
+            <ul>
+                <li>Gerado com o comando <code>/export file=nome_do_arquivo</code> no terminal.</li>
+                <li>Cria um arquivo de texto com os comandos CLI para recriar a configuração.</li>
+                <li><strong>Prós:</strong> Arquivo de texto legível e editável. Portátil entre diferentes modelos e versões do RouterOS.</li>
+                <li><strong>Contras:</strong> Não salva senhas de usuários ou outros dados sensíveis.</li>
+            </ul>
+        `
+    },
+    'mikrotik_1_8': {
+        title: 'Automatizando Backups',
+        content: `
+            <h3>Agendando a Segurança</h3>
+            <p>Automatizar a criação de backups é uma prática de segurança fundamental. No RouterOS, isso é feito combinando as ferramentas de Script e Scheduler.</p>
+            <ol>
+                <li><strong>Criar o Script de Backup:</strong>
+                   <p>Em <code>System > Scripts</code>, crie um novo script. No campo "Source", insira um comando para gerar o backup com um nome único, usando variáveis de data e hora:</p>
+                   <pre><code>:local sysname [/system identity get name]
+:local date [/system clock get date]
+/system backup save name="$sysname-$date"</code></pre>
+                </li>
+                <li><strong>Agendar a Execução:</strong>
+                   <p>Em <code>System > Scheduler</code>, crie um novo agendamento. Defina um intervalo (ex: <code>1d</code> para rodar diariamente) e no campo "On Event", digite o nome do script que você criou. </p>
+                </li>
+            </ol>
+            <p>Com isso, o Mikrotik irá gerar um novo arquivo de backup automaticamente todos os dias.</p>
+        `
+    },
+    'mikrotik_1_9': {
+        title: 'Enviando Backups por E-mail',
+        content: `
+            <h3>Backup Externo por E-mail</h3>
+            <p>Manter os backups apenas no dispositivo não é uma estratégia segura. Uma forma prática de externalizá-los é configurando o envio automático por e-mail.</p>
+            <ol>
+                <li><strong>Configurar o Servidor de E-mail:</strong>
+                   <p>Em <code>Tools > Email</code>, insira os dados do seu servidor SMTP (como o do Gmail, por exemplo). Você precisará do endereço do servidor, porta, e suas credenciais de login. Use o botão "Send Email" para validar a configuração.</p>
+                </li>
+                <li><strong>Atualizar o Script de Backup:</strong>
+                   <p>Adicione ao final do seu script de backup o comando para enviar o arquivo gerado:</p>
+                   <pre><code>:local backupfile ("$sysname-$date" . ".backup")
+/tool e-mail send to="seu_email@dominio.com" subject="Backup Diário - $sysname" file=$backupfile</code></pre>
+                </li>
+            </ol>
+            <p>Agora, após cada backup, um e-mail com o arquivo em anexo será enviado para seu endereço.</p>
+        `
+    },
+    'mikrotik_1_10': {
+        title: 'DHCP: Cliente e Servidor',
+        content: `
+            <h3>Automação de Endereçamento IP</h3>
+            <p>O DHCP (Dynamic Host Configuration Protocol) é o protocolo que automatiza a atribuição de endereços IP em uma rede.</p>
+            <h4>DHCP Cliente:</h4>
+            <p>Configurado na interface que se conecta à internet (WAN), o Mikrotik atua como um cliente para <strong>receber</strong> um endereço IP do seu provedor.</p>
+            <pre><code>/ip dhcp-client add interface=ether1 disabled=no</code></pre>
+            <h4>DHCP Servidor:</h4>
+            <p>Configurado na interface da sua rede local (LAN), o Mikrotik atua como um servidor para <strong>distribuir</strong> endereços IP para os computadores, smartphones e outros dispositivos conectados.</p>
+            <p>A maneira mais fácil de configurar é através do assistente "DHCP Setup" em <code>IP > DHCP Server</code>, que guia você por todo o processo.</p>
+        `
+    },
+    'mikrotik_1_11': {
+        title: 'Unificando Portas com Bridge',
+        content: `
+            <h3>Transformando Portas em um Switch</h3>
+            <p>Uma Bridge no RouterOS é uma interface virtual que agrupa múltiplas interfaces físicas (como <code>ether2</code>, <code>ether3</code>, <code>wlan1</code>), fazendo-as funcionar como uma única interface de Camada 2. Na prática, ela transforma um conjunto de portas do seu roteador em um switch unificado.</p>
+            <p>Isso é essencial para criar uma rede local coesa. Você cria a bridge, adiciona as portas desejadas a ela, e então aplica as configurações de IP e DHCP diretamente na interface da bridge, e não nas portas físicas individuais.</p>
+            <pre><code># Criando a bridge e adicionando portas via CLI
+/interface bridge add name=bridge-lan
+/interface bridge port add bridge=bridge-lan interface=ether2
+/interface bridge port add bridge=bridge-lan interface=wlan1</code></pre>
+        `
+    },
+    'mikrotik_1_12': {
+        title: 'Rotas Estáticas e VPNs',
+        content: `
+            <h3>Conectando Redes Distintas</h3>
+            <h4>VPN (Virtual Private Network):</h4>
+            <p>O RouterOS é extremamente capaz em VPNs, suportando múltiplos protocolos como PPTP, L2TP/IPsec, OpenVPN e WireGuard. A VPN estabelece um "túnel" criptografado pela internet, permitindo que você se conecte à sua rede de forma segura de qualquer lugar do mundo.</p>
+            <h4>Roteamento Estático:</h4>
+            <p>O roteamento estático é a forma manual de ensinar ao roteador como alcançar redes que não estão diretamente conectadas a ele. Você define explicitamente: "Para chegar à rede de destino X, envie o tráfego para o gateway Y".</p>
+            <pre><code># Exemplo: Rota para a rede da filial (10.20.30.0/24) através de um gateway
+/ip route add dst-address=10.20.30.0/24 gateway=192.168.1.254</code></pre>
+        `
+    },
+    'mikrotik_1_13': {
+        title: 'Descobrindo Dispositivos Vizinhos',
+        content: `
+            <h3>Mapeando a Vizinhança</h3>
+            <p>A ferramenta Neighbor Discovery (acessível em <code>IP > Neighbors</code>) é um recurso que permite ao Mikrotik descobrir outros dispositivos na mesma rede física (mesmo domínio de broadcast) que utilizam protocolos de descoberta, como o MNDP (Mikrotik) ou CDP (Cisco).</p>
+            <p>Ela exibe informações valiosas como endereço MAC, IP, modelo e versão do software do vizinho. É extremamente útil para mapear a rede e para realizar o primeiro acesso a um dispositivo via Winbox (clicando no endereço MAC) antes mesmo que ele tenha um IP configurado.</p>
+        `
+    },
+    'mikrotik_1_14': {
+        title: 'Controle de Banda (QoS)',
+        content: `
+            <h3>Gerenciando a Largura de Banda com Simple Queues</h3>
+            <p>Uma das funcionalidades mais aclamadas do RouterOS é seu robusto sistema de Qualidade de Serviço (QoS). A forma mais direta de limitar a velocidade de download e upload para um IP específico é através das "Simple Queues".</p>
+            <p>Em <code>Queues > Simple Queues</code>, crie uma nova regra. Os campos essenciais são:</p>
+            <ul>
+                <li><strong>Name:</strong> Um nome descritivo para a regra (ex: "PC-Secretaria").</li>
+                <li><strong>Target:</strong> O endereço IP do dispositivo a ser limitado (ex: <code>192.168.88.10</code>).</li>
+                <li><strong>Max Limit (Upload/Download):</strong> A velocidade máxima permitida (ex: <code>2M/10M</code> para 2 Mbps de upload e 10 Mbps de download).</li>
+            </ul>
+            <pre><code># Exemplo via CLI
+/queue simple add name=PC-Secretaria target=192.168.88.10 max-limit=2M/10M</code></pre>
+        `
+    },
+    'mikrotik_1_15': {
+        title: 'Redirecionamento de Portas (NAT)',
+        content: `
+            <h3>Publicando Serviços Internos</h3>
+            <p>O redirecionamento de portas, conhecido como NAT de Destino (Dst-Nat), é o mecanismo que permite que o tráfego vindo da internet alcance um serviço específico (como um servidor web ou uma câmera de segurança) dentro da sua rede local.</p>
+            <p>Para permitir o acesso a um servidor web interno no IP <code>192.168.88.100</code>, você criaria uma regra em <code>IP > Firewall > NAT</code> com as seguintes características:</p>
+            <ul>
+                <li><strong>Chain:</strong> <code>dstnat</code></li>
+                <li><strong>Protocol:</strong> <code>tcp</code> e <strong>Dst. Port:</strong> <code>80,443</code></li>
+                <li><strong>In. Interface:</strong> Sua interface de internet (ex: <code>ether1</code>)</li>
+                <li>Na aba <strong>Action</strong>: <strong>Action:</strong> <code>dst-nat</code>, <strong>To Addresses:</strong> <code>192.168.88.100</code></li>
+            </ul>
+            <p>Essa regra instrui o roteador a encaminhar todo o tráfego web que chega da internet para o seu servidor interno.</p>
+        `
+    },
+    'mikrotik_1_16': {
+        title: 'Firewall: Regras Essenciais',
+        content: `
+            <h3>Protegendo Seu Roteador e Sua Rede</h3>
+            <p>Um firewall bem configurado é a base da segurança. A estratégia inicial deve ser proteger o acesso ao próprio roteador (a "input chain") e o tráfego que o atravessa (a "forward chain"). A abordagem recomendada é "negar tudo e permitir o necessário".</p>
+            <h4>Regras Essenciais para a Chain 'Input':</h4>
+            <ol>
+                <li>Permitir tráfego de conexões já estabelecidas e relacionadas (essencial para o funcionamento da internet).</li>
+                <li>Permitir o acesso de gerenciamento (Winbox, SSH) vindo apenas da sua rede interna confiável.</li>
+                <li>Bloquear (drop) todas as outras tentativas de conexão vindas da internet.</li>
+            </ol>
+            <pre><code># Exemplo de regras de input via CLI
+/ip firewall filter
+add chain=input action=accept connection-state=established,related comment="Aceita conexoes estabelecidas"
+add chain=input action=accept src-address-list=rede-local in-interface=bridge-lan comment="Permite acesso da LAN"
+add chain=input action=drop in-interface=ether1 comment="Bloqueia todo o resto da internet"</code></pre>
+        `
+    },
+    'mikrotik_1_17': {
+        title: 'Monitoramento com SNMP',
+        content: `
+            <h3>Coletando Dados de Desempenho</h3>
+            <p>SNMP (Simple Network Management Protocol) é o protocolo padrão da indústria para monitorar dispositivos de rede. Ele permite que sistemas de monitoramento (como Zabbix, Grafana, PRTG) coletem métricas vitais de seus equipamentos, como uso de CPU, memória, tráfego de interface e temperatura.</p>
+            <p>Para habilitar o SNMP no RouterOS, acesse <code>IP > SNMP</code>. Marque a caixa "Enabled". O passo mais importante é configurar uma "Community" (que atua como uma senha) com permissões de apenas leitura (Read Only) e, por segurança, restringir o acesso apenas ao endereço IP do seu servidor de monitoramento no campo "Addresses".</p>
+        `
+    },
+    'mikrotik_1_18': {
+        title: 'A Importância de Documentar',
+        content: `
+            <h3>Deixando Comentários para o Futuro</h3>
+            <p>Uma das melhores práticas em administração de redes é documentar suas configurações. O RouterOS facilita isso permitindo que você adicione um comentário a praticamente qualquer item: uma regra de firewall, uma rota, uma interface, uma fila, etc.</p>
+            <p>No Winbox, a maioria das janelas possui um botão "Comment". Na CLI, você pode usar o parâmetro <code>comment="Sua anotação aqui"</code> ao criar um item, ou adicioná-lo posteriormente com o comando <code>set [find ...] comment="..."</code>. Use este recurso para explicar o "porquê" de cada configuração. Seu "eu" do futuro (e seus colegas de equipe) agradecerão.</p>
+        `
+    },
+    'mikrotik_1_19': {
+        title: 'Analisando Uso de CPU',
+        content: `
+            <h3>Monitorando a Saúde do Dispositivo</h3>
+            <p>É crucial monitorar o desempenho do seu roteador para garantir a estabilidade da rede. Uma visão geral rápida está disponível em <code>System > Resources</code>, que exibe o uso de CPU, memória e tempo de atividade.</p>
+            <p>Se você notar um uso de CPU consistentemente alto, a ferramenta <strong>Profiler</strong> (acessível em <code>Tools > Profile</code>) é indispensável. Ela detalha em tempo real qual processo específico do sistema está consumindo mais recursos, ajudando a diagnosticar a causa raiz do problema, que pode ser uma regra de firewall ineficiente, um loop de roteamento, ou outra configuração inadequada.</p>
+        `
+    },
+    'mikrotik_1_20': {
+        title: 'Configuração Padrão para Clientes',
+        content: `
+            <h3>Checklist: Do Zero à Navegação</h3>
+            <p>Este é um guia rápido e consolidado para configurar um Mikrotik para um cliente residencial ou de pequeno porte, garantindo funcionalidade e segurança.</p>
+            <ol>
+                <li><strong>Resetar Configurações:</strong> Comece com uma base limpa (<code>System > Reset Configuration</code>, com a opção "No Default Configuration").</li>
+                <li><strong>Segurança Inicial:</strong> Defina uma senha forte para o usuário 'admin' (<code>System > Password</code>).</li>
+                <li><strong>Configurar WAN:</strong> Configure a porta da internet (<code>ether1</code>) como cliente DHCP (<code>IP > DHCP Client</code>).</li>
+                <li><strong>Criar LAN Unificada:</strong> Crie uma bridge e adicione as portas LAN e WLAN a ela (<code>Bridge</code>).</li>
+                <li><strong>Endereçar a LAN:</strong> Atribua um endereço IP à interface da bridge (ex: <code>192.168.1.1/24</code> em <code>IP > Addresses</code>).</li>
+                <li><strong>Servidor DHCP para LAN:</strong> Configure um servidor DHCP na bridge para distribuir IPs aos dispositivos (<code>IP > DHCP Server > DHCP Setup</code>).</li>
+                <li><strong>Habilitar NAT:</strong> Crie uma regra de NAT (masquerade) para que os dispositivos da LAN possam acessar a internet (<code>IP > Firewall > NAT</code>).</li>
+                <li><strong>Configurar Wi-Fi:</strong> Defina o nome da rede (SSID) e a segurança (WPA2) na interface wireless.</li>
+                <li><strong>Firewall Básico:</strong> Aplique regras de firewall essenciais para proteger o roteador.</li>
+            </ol>
+        `
+    },
+    'mikrotik_2_1': {
+        title: 'Túneis EoIP: Estendendo a Camada 2',
+        content: `<h3>Construindo Pontes Virtuais</h3><p>O túnel EoIP (Ethernet over IP) é um protocolo da Mikrotik que permite criar uma ponte de Camada 2 entre dois roteadores através de uma rede de Camada 3 (como a internet). Na prática, ele permite que você estenda sua rede local para um local remoto, como se estivessem conectados pelo mesmo switch. É útil para cenários onde você precisa unificar redes em diferentes filiais.</p>`
+    },
+    'mikrotik_2_2': {
+        title: 'OSPF: Roteamento Dinâmico - Parte 1',
+        content: `<h3>Introdução ao OSPF</h3><p>OSPF (Open Shortest Path First) é um protocolo de roteamento dinâmico do tipo link-state, ideal para redes de médio e grande porte. Diferente das rotas estáticas, o OSPF permite que os roteadores descubram a topologia da rede e calculem o melhor caminho para cada destino automaticamente, se adaptando a falhas de link de forma rápida e eficiente.</p>`
+    },
+    'mikrotik_2_3': {
+        title: 'OSPF: Roteamento Dinâmico - Parte 2',
+        content: `<h3>Aprofundando no OSPF</h3><p>Nesta aula, exploramos conceitos mais avançados do OSPF, como a divisão da rede em áreas para melhorar a escalabilidade, os diferentes tipos de LSAs (Link-State Advertisements) que os roteadores trocam, e como otimizar a convergência da rede ajustando os timers e os custos das interfaces.</p>`
+    },
+    'mikrotik_2_4': {
+        title: 'VPN Segura com L2TP/IPsec',
+        content: `<h3>VPN para Acesso Remoto de Clientes</h3><p>Enquanto VPNs site-to-site conectam redes, VPNs de acesso remoto permitem que usuários individuais (em notebooks, smartphones) se conectem à rede da empresa de forma segura. O L2TP (Layer 2 Tunneling Protocol) combinado com IPsec é uma solução robusta e amplamente compatível para este fim, oferecendo um túnel criptografado para o tráfego do cliente.</p>`
+    },
+    'mikrotik_2_5': {
+        title: 'Análise de Tráfego com Torch',
+        content: `<h3>Monitoramento em Tempo Real</h3><p>O Torch é uma ferramenta poderosa do RouterOS para análise de tráfego em tempo real. Ele permite que você visualize as conexões que estão passando por uma interface, mostrando o endereço de origem, destino, portas utilizadas e a taxa de transferência de cada fluxo de dados. É uma ferramenta indispensável para diagnosticar problemas de lentidão e identificar o consumo de banda na rede.</p>`
+    },
+    'mikrotik_2_6': {
+        title: 'Segmentação de Rede com VLANs',
+        content: `<h3>Criando Redes Virtuais</h3><p>VLANs (Virtual LANs) permitem segmentar uma rede física em múltiplas redes lógicas independentes. No Mikrotik, isso é configurado na bridge. Você pode, por exemplo, criar uma VLAN para o departamento de TI, outra para o Financeiro e uma terceira para visitantes, isolando o tráfego entre elas e aumentando a segurança e a organização da rede, mesmo que todos estejam conectados ao mesmo switch.</p>`
+    },
+    'mikrotik_2_7': {
+        title: 'Failover de Link com Netwatch',
+        content: `<h3>Garantindo a Redundância</h3><p>O Netwatch é uma ferramenta que monitora a disponibilidade de um host na rede (geralmente pingando-o). Sua grande vantagem é a capacidade de executar scripts automaticamente quando o status do host muda (de online para offline, e vice-versa). Isso o torna perfeito para criar um sistema de failover de link de internet: o Netwatch monitora o gateway do link principal e, se ele falhar, executa um script para ativar a rota do link de backup.</p>`
+    },
+    'mikrotik_2_8': {
+        title: 'Recuperando RouterBOARDS com Netinstall',
+        content: `<h3>Reinstalação do Sistema</h3><p>O Netinstall é a ferramenta oficial da Mikrotik para reinstalar o RouterOS do zero. É o último recurso para recuperar uma RouterBOARD que não inicializa, está com o sistema corrompido ou cuja senha de acesso foi perdida. O processo envolve conectar o dispositivo diretamente ao computador e usar o Netinstall para enviar uma nova imagem de software via rede.</p>`
+    },
+    'bgp_1': {
+        title: 'Como a Internet Realmente Funciona',
+        content: `<h3>A Rede das Redes</h3><p>A internet não é uma entidade única, mas sim uma vasta "rede de redes". Cada uma dessas redes (de um provedor, de uma grande empresa, etc.) é chamada de Sistema Autônomo (AS - Autonomous System). O BGP (Border Gateway Protocol) é o protocolo que permite que esses Sistemas Autônomos troquem informações sobre quais redes eles conseguem alcançar, formando o mapa global de roteamento da internet.</p>`
+    },
+    'bgp_2': {
+        title: 'Ecossistema: PTT, CDN e NIC.br',
+        content: `<h3>Peças-Chave do Ecossistema da Internet</h3><p>Nesta aula, desvendamos termos cruciais para quem trabalha com provedores: <strong>PTT (Ponto de Troca de Tráfego)</strong>, locais onde diferentes ASes se conectam para trocar tráfego diretamente; <strong>CDN (Content Delivery Network)</strong>, redes que distribuem conteúdo popular para mais perto do usuário final; e o papel do <strong>NIC.br</strong>, a entidade que gerencia a alocação de IPs e ASNs no Brasil.</p>`
+    },
+    'bgp_3': {
+        title: 'Explorando o Menu BGP no RouterOS',
+        content: `<h3>Visão Geral da Configuração BGP</h3><p>Vamos explorar as seções principais do menu BGP no RouterOS para entender onde cada peça se encaixa. As abas mais importantes são: <strong>Instances</strong> (onde se define a configuração geral do seu AS), <strong>Peers</strong> (onde se configuram as sessões com outros ASes), e <strong>Networks</strong> (onde se define quais prefixos de rede o seu AS irá anunciar para o mundo).</p>`
+    },
+    'bgp_4': {
+        title: 'Estabelecendo a Primeira Sessão BGP',
+        content: `<h3>Conectando-se a Outro AS</h3><p>Uma sessão BGP, ou "peer", é a conexão estabelecida entre dois roteadores de Sistemas Autônomos diferentes para a troca de informações de roteamento. Nesta aula, configuramos passo a passo uma sessão BGP, definindo o AS remoto, os endereços IP da conexão e as políticas de importação e exportação de rotas.</p>`
+    },
+    'bgp_5': {
+        title: 'Filtragem de Rotas: Boas Práticas',
+        content: `<h3>Controlando o Fluxo de Rotas</h3><p>Anunciar ou aceitar rotas incorretas via BGP pode causar grandes problemas na internet (vazamentos de rotas). Por isso, é fundamental criar filtros (route filters) para controlar precisamente quais prefixos de rede você anuncia para seus vizinhos e quais prefixos você aceita deles. Essa é uma medida de segurança e estabilidade indispensável para qualquer operador de rede que usa BGP.</p>`
+    },
+    'linux_1': {
+        title: 'Introdução ao Mundo Linux',
+        content: `<h3>O Sistema Operacional dos Servidores</h3><p>Linux é um sistema operacional de código aberto que domina o mundo dos servidores, da nuvem e dos dispositivos embarcados. Nesta aula, discutimos o que é o Linux, a diferença entre o kernel e uma distribuição (como Debian, Ubuntu, CentOS), e por que sua estabilidade, segurança e flexibilidade o tornam a escolha preferida para a infraestrutura da internet.</p>`
+    },
+    'linux_2': {
+        title: 'Instalando um Servidor Linux',
+        content: `<h3>Guia de Instalação</h3><p>Um guia prático e passo a passo para instalar uma distribuição Linux focada em servidores, como o Debian. Abordamos o processo de particionamento de disco, configuração de rede inicial, seleção de pacotes e a criação do primeiro usuário.</p>`
+    },
+    'linux_3': {
+        title: 'Comandos Essenciais do Terminal',
+        content: `<h3>Dominando a Linha de Comando</h3><p>A verdadeira força do Linux está no seu terminal. Nesta aula, aprendemos os comandos essenciais que todo analista de redes e administrador de sistemas deve conhecer, incluindo navegação no sistema de arquivos (<code>ls</code>, <code>cd</code>, <code>pwd</code>), manipulação de arquivos (<code>cp</code>, <code>mv</code>, <code>rm</code>), verificação de rede (<code>ip a</code>, <code>ping</code>) e edição de texto (<code>nano</code>).</p>`
+    },
+    'linux_4': {
+        title: 'Aumentando a Segurança do SSH',
+        content: `<h3>Protegendo o Acesso Remoto</h3><p>Uma das primeiras medidas de segurança em qualquer servidor Linux é "endurecer" a configuração do serviço SSH. Abordamos práticas essenciais como desabilitar o login do usuário root e, principalmente, alterar a porta padrão do SSH (22) para uma porta alta não-padrão. Isso reduz drasticamente a exposição a ataques automatizados de força bruta.</p>`
+    },
+    'linux_5': {
+        title: 'Monitoramento com Zabbix',
+        content: `<h3>Instalando o Servidor Zabbix</h3><p>Zabbix é uma das ferramentas de monitoramento de código aberto mais poderosas e completas do mercado. Nesta aula, seguimos um guia detalhado para instalar o servidor Zabbix em uma máquina Linux, preparando o ambiente para começar a monitorar toda a nossa infraestrutura de rede.</p>`
+    },
+    'linux_6': {
+        title: 'Dashboards com Grafana',
+        content: `<h3>Visualizando Seus Dados</h3><p>Enquanto o Zabbix é excelente para coletar e armazenar dados, o Grafana é a ferramenta líder para visualizá-los. Mostramos como instalar o Grafana e integrá-lo ao Zabbix como uma fonte de dados (datasource), permitindo a criação de dashboards modernos, informativos e visualmente atraentes para suas métricas de rede.</p>`
+    },
+    'linux_7': {
+        title: 'Integrando Zabbix e Grafana',
+        content: `<h3>Do Dado ao Gráfico</h3><p>Com as ferramentas instaladas, é hora de colocá-las para trabalhar. Nesta aula prática, mostramos como adicionar um novo dispositivo (host) para ser monitorado pelo Zabbix via SNMP e, em seguida, como criar um painel no Grafana para exibir uma métrica específica (como o tráfego de uma interface) em um gráfico em tempo real.</p>`
+    },
+    'linux_8': {
+        title: 'Traduzindo a Interface do Zabbix',
+        content: `<h3>Localização da Interface</h3><p>Uma dica rápida de usabilidade: mostramos como instalar os pacotes de idioma necessários no servidor Linux e como alterar a configuração de perfil de usuário no Zabbix para que toda a interface web seja exibida em Português do Brasil.</p>`
+    },
+    'linux_9': {
+        title: 'Recuperação de Senha do Zabbix',
+        content: `<h3>Procedimento de Recuperação</h3><p>Perder a senha de administrador do Zabbix pode ser um grande problema. Demonstramos o procedimento de recuperação, que envolve acessar o banco de dados do Zabbix diretamente no servidor para resetar a senha do usuário 'Admin'.</p>`
+    },
+    'linux_10': {
+        title: 'Implementando um DNS Recursivo',
+        content: `<h3>Otimizando a Resolução de Nomes</h3><p>Configurar um servidor DNS recursivo local (usando softwares como BIND9 ou Unbound) para sua rede pode trazer grandes benefícios. Ele acelera a resolução de nomes através de cache local, aumenta a segurança ao centralizar as consultas e dá a você mais controle sobre o tráfego DNS da sua infraestrutura.</p>`
+    },
+    'firewall_1': {
+        title: 'Estratégias de Firewall Corporativo',
+        content: `<h3>Defendendo o Perímetro da Rede</h3><p>Esta aula aborda estratégias de firewall para ambientes empresariais. Discutimos a importância da política de "negação padrão" (deny by default), a criação de regras explícitas para liberar apenas os serviços necessários, a configuração de NAT de destino para servidores internos e a importância crítica de registrar (logar) o tráfego para auditoria e análise de segurança.</p>`
+    },
+    'provedor_1': {
+        title: 'LAB: Roteamento Interno com OSPF',
+        content: `<h3>Construindo o Core do Provedor</h3><p>Iniciamos a construção da topologia de um pequeno provedor de internet (WISP) no EVE-NG. O primeiro passo é configurar a rede interna, interligando os roteadores de borda, o roteador do core e os roteadores de concentração (OLTs/switches) com o protocolo OSPF para garantir que todos os equipamentos internos consigam se comunicar de forma dinâmica e resiliente.</p>`
+    },
+    'provedor_2': {
+        title: 'Autenticação de Clientes com PPPoE',
+        content: `<h3>Conectando e Gerenciando Clientes</h3><p>O PPPoE (Point-to-Point Protocol over Ethernet) é o método mais comum para autenticar clientes em redes de provedores. Configuramos um servidor PPPoE no roteador de borda para que os clientes possam "discar" e receber um endereço IP. Também configuramos o NAT de origem (Source NAT), que funciona de forma similar ao CGNAT, para permitir que os clientes com IPs privados naveguem na internet.</p>`
+    },
+    'provedor_3': {
+        title: 'Instalando o MK-Auth no EVE-NG',
+        content: `<h3>Adicionando o Sistema de Gerenciamento</h3><p>Para gerenciar clientes, planos e faturamento, os provedores utilizam sistemas de gerenciamento como o MK-Auth. Nesta aula, mostramos como adicionar uma máquina virtual Linux ao EVE-NG e instalar o sistema MK-Auth, preparando o terreno para a integração com nossa rede.</p>`
+    },
+    'provedor_4': {
+        title: 'Solucionando a Instalação do MK-Auth',
+        content: `<h3>Resolvendo Problemas Comuns</h3><p>Esta aula é dedicada a resolver os problemas e erros mais comuns que podem ocorrer durante a instalação e a configuração inicial do MK-Auth, garantindo que o sistema esteja funcional e pronto para ser integrado à rede.</p>`
+    },
+    'provedor_5': {
+        title: 'Integração Radius com MK-Auth',
+        content: `<h3>Autenticação Centralizada</h3><p>A mágica acontece quando integramos o servidor PPPoE do Mikrotik com o MK-Auth usando o protocolo Radius. Com essa integração, o Mikrotik passa a consultar o MK-Auth para verificar o usuário e a senha de cada cliente que tenta se conectar, permitindo o gerenciamento centralizado de autenticação, autorização e contabilização (AAA).</p>`
+    },
+    'huawei_1': {
+        title: 'Adicionando Imagem Huawei no EVE-NG',
+        content: `<h3>Praticando com Equipamentos de Grande Porte</h3><p>Para expandir nossos horizontes, mostramos o processo de como obter e instalar a imagem de um roteador de grande porte, como o Huawei NE-40, no EVE-NG. Isso permite que os alunos pratiquem com a linha de comando e as configurações de um fabricante diferente, muito presente no core de grandes operadoras.</p>`
+    },
+    'semana_1': {
+        title: 'Revisão Intensiva - Aula 1',
+        content: `<h3>Revisão Focada para o Mercado</h3><p>Uma aula intensiva que revisa os fundamentos mais críticos de redes, com foco nos conceitos que são frequentemente cobrados em entrevistas e exigidos no dia a dia de um analista de redes, preparando o aluno para os desafios do mundo real.</p>`
+    },
+    'semana_2': {
+        title: 'Revisão Intensiva - Aula 2',
+        content: `<h3>Foco em Switching e Roteamento</h3><p>Esta aula de revisão é focada em switching e roteamento. Abordamos cenários práticos de configuração de VLANs, Spanning Tree, rotas estáticas e OSPF, consolidando o conhecimento em Camada 2 e Camada 3.</p>`
+    },
+    'semana_3': {
+        title: 'Revisão Intensiva - Aula 3',
+        content: `<h3>Segurança e Serviços Essenciais</h3><p>Nesta aula, mergulhamos em segurança de redes e nos serviços que fazem a rede funcionar. Revisamos a criação de regras de firewall eficazes e a configuração e diagnóstico de serviços vitais como DHCP e DNS.</p>`
+    },
+    'semana_4': {
+        title: 'Atualização: Mikrotik no EVE-NG',
+        content: `<h3>Instalação Atualizada do Mikrotik CHR</h3><p>Uma aula bônus e atualizada, mostrando o método mais recente e otimizado para baixar e instalar a imagem do Mikrotik Cloud Hosted Router (CHR) no EVE-NG, garantindo que os alunos estejam usando as versões mais novas.</p>`
+    },
+    'extras_1': {
+        title: 'Estudo de Caso: Ataque DDoS',
+        content: `<h3>Analisando um Ataque na Prática</h3><p>Um estudo de caso prático e descontraído que demonstra o que é um ataque de Negação de Serviço Distribuído (DDoS). Exploramos como ele funciona, como dispositivos do dia a dia (IoT) podem ser cooptados para uma botnet e quais são as primeiras medidas de mitigação.</p>`
+    },
+    'extras_2': {
+        title: 'Bloqueando Sites via Arquivo Hosts',
+        content: `<h3>Controle Local de Resolução de Nomes</h3><p>Mostramos como editar o arquivo 'hosts' do sistema operacional (Windows, Linux ou macOS) para forçar a resolução de um domínio para um IP específico (como 127.0.0.1). É uma técnica simples e eficaz para bloquear o acesso a determinados sites em um computador local, útil para controle parental ou para aumentar o foco durante o trabalho.</p>`
     },
     'cidr_calculator': {
       title: 'Calculadora CIDR',
-      content: ''
-    },
-    // Módulo 1 do Curso
-    'course_1_1': {
-        title: '1.1: Introdução às Redes Modernas',
-        content: `
-            <h3>O que é?</h3>
-            <p>Uma rede de computadores é um conjunto de dispositivos (como computadores, celulares, servidores) interconectados que trocam informações e compartilham recursos.</p>
-            <h4>Analogia</h4>
-            <p>Pense em uma cidade. As casas e prédios são os dispositivos finais (hosts). As ruas e avenidas são os meios de transmissão (cabos, Wi-Fi). Os cruzamentos e rotatórias são os dispositivos intermediários (switches e roteadores), que direcionam o tráfego.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Dispositivos Finais (End Devices/Hosts):</strong> Onde a comunicação começa e termina. Exemplos: PC, smartphone, impressora de rede, servidor.</li>
-                <li><strong>Dispositivos Intermediários (Intermediary Devices):</strong> Conectam os dispositivos finais e garantem que os dados cheguem ao destino. Exemplos:
-                    <ul>
-                        <li><strong>Switch:</strong> Conecta dispositivos na mesma rede local (LAN).</li>
-                        <li><strong>Roteador:</strong> Conecta diferentes redes entre si (ex: sua casa com a Internet).</li>
-                        <li><strong>Access Point (AP):</strong> Permite a conexão de dispositivos sem fio (Wi-Fi).</li>
-                    </ul>
-                </li>
-                <li><strong>Meios de Rede (Network Media):</strong> O caminho físico por onde os dados viajam.
-                    <ul>
-                        <li><strong>Cabo de Cobre (UTP):</strong> Usa sinais elétricos. Comum em redes locais.</li>
-                        <li><strong>Fibra Óptica:</strong> Usa pulsos de luz. Ideal para longas distâncias e altas velocidades (imune a interferência eletromagnética).</li>
-                        <li><strong>Sem Fio (Wireless):</strong> Usa ondas de rádio (Wi-Fi, 4G/5G).</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Na sua casa, seu notebook (host) se conecta via Wi-Fi (meio) a um roteador (dispositivo intermediário), que por sua vez se conecta à Internet (outra rede).</p>
-        `
-    },
-    'course_1_2': {
-        title: '1.2: Modelos OSI e TCP/IP',
-        content: `
-            <h3>O que são?</h3>
-            <p>São modelos conceituais que dividem o complexo processo de comunicação de rede em camadas menores e mais gerenciáveis. Eles padronizam como os dispositivos devem se comunicar.</p>
-            <h4>Analogia</h4>
-            <p>Pense no processo de enviar uma carta. Você escreve a carta (Aplicação), coloca em um envelope e escreve o endereço (Rede/Transporte), o carteiro pega a carta e a leva pela rua (Enlace/Física). O processo se inverte na chegada para que a pessoa possa ler.</p>
-            <h4>Detalhes Técnicos - Modelo OSI (7 Camadas)</h4>
-            <ol start="7" style="list-style-type: decimal-leading-zero; direction: rtl; text-align: left;">
-                <li value="7"><strong>Aplicação:</strong> Interface com o usuário (Navegador, E-mail). Protocolos: HTTP, FTP, DNS.</li>
-                <li value="6"><strong>Apresentação:</strong> Formatação dos dados, criptografia, compressão.</li>
-                <li value="5"><strong>Sessão:</strong> Inicia, gerencia e termina as conversas (sessões) entre aplicações.</li>
-                <li value="4"><strong>Transporte:</strong> Garante a entrega ponta a ponta. Segmenta os dados e controla o fluxo. Protocolos: TCP (confiável) e UDP (rápido).</li>
-                <li value="3"><strong>Rede:</strong> Endereçamento lógico (endereço IP) e roteamento (encontrar o melhor caminho entre redes). Dispositivo: Roteador.</li>
-                <li value="2"><strong>Enlace de Dados:</strong> Endereçamento físico (endereço MAC) e controle de acesso ao meio. Dispositivo: Switch.</li>
-                <li value="1"><strong>Física:</strong> Transmissão dos bits (0s e 1s) através do meio físico (cabos, sinais de rádio).</li>
-            </ol>
-            <h4>Detalhes Técnicos - Modelo TCP/IP (4 Camadas)</h4>
-            <ul>
-                <li><strong>Aplicação:</strong> Combina as camadas 5, 6 e 7 do OSI.</li>
-                <li><strong>Transporte:</strong> Equivalente à camada 4 do OSI (TCP/UDP).</li>
-                <li><strong>Internet:</strong> Equivalente à camada 3 do OSI (IP).</li>
-                <li><strong>Acesso à Rede:</strong> Combina as camadas 1 e 2 do OSI.</li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Quando você acessa um site, seu navegador (Aplicação) usa o protocolo HTTP. O TCP (Transporte) quebra a solicitação em segmentos. O IP (Rede) adiciona os endereços de origem e destino. O Ethernet (Enlace) coloca tudo em um quadro com endereços MAC. E a camada Física envia os sinais pelo cabo.</p>
-        `
-    },
-    'course_1_3': {
-        title: '1.3: Camada Física e Sistemas de Numeração',
-        content: `
-            <h3>O que é?</h3>
-            <p>A Camada Física é responsável por converter os dados digitais (bits) em sinais físicos (elétricos, luminosos ou de rádio) para serem transmitidos pelo meio de rede.</p>
-            <h4>Analogia</h4>
-            <p>É como a "voz" da rede. Ela não entende o significado das palavras (dados), apenas as pronuncia (transmite os sinais) da forma correta para que o outro lado possa ouvir.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Meios de Transmissão:</strong>
-                    <ul>
-                        <li><strong>Cabo UTP (Par Trançado Não Blindado):</strong> O mais comum em LANs. Suscetível a interferência eletromagnética (EMI).</li>
-                        <li><strong>Fibra Óptica:</strong> Imune a EMI, permite maiores distâncias e velocidades. Usada em backbones e data centers.</li>
-                    </ul>
-                </li>
-                <li><strong>Sistemas de Numeração:</strong> Computadores não entendem letras, apenas números.
-                    <ul>
-                        <li><strong>Binário (Base 2):</strong> Usa apenas 0 e 1. É a linguagem fundamental dos computadores.</li>
-                        <li><strong>Decimal (Base 10):</strong> O sistema que usamos no dia a dia (0 a 9).</li>
-                        <li><strong>Hexadecimal (Base 16):</strong> Usa números de 0 a 9 e letras de A a F. É usado para representar endereços MAC e IPv6 de forma mais compacta.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Um endereço IP como 192.168.1.1 é apenas uma representação decimal para humanos. Para o computador, ele é <code>11000000.10101000.00000001.00000001</code> em binário.</p>
-        `
-    },
-    'course_1_4': {
-        title: '1.4: Camada de Enlace de Dados e Endereçamento MAC',
-        content: `
-            <h3>O que é?</h3>
-            <p>A Camada de Enlace (Layer 2) é responsável pela comunicação dentro da mesma rede local. Ela usa o endereço MAC para entregar os dados ao dispositivo correto no mesmo segmento de rede.</p>
-            <h4>Analogia</h4>
-            <p>Pense no endereço MAC como o número do apartamento em um prédio. O endereço IP é o endereço do prédio. Para entregar uma carta (pacote de dados) dentro do prédio, o carteiro precisa saber o número do apartamento (endereço MAC).</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Endereço MAC (Media Access Control):</strong> Um endereço físico de 48 bits, único para cada placa de rede no mundo, gravado de fábrica. Representado em hexadecimal (ex: <code>00:1A:2B:3C:4D:5E</code>).</li>
-                <li><strong>Frame (Quadro):</strong> É a "embalagem" que a Camada de Enlace usa para transportar os dados. Um frame Ethernet contém o endereço MAC de origem, o endereço MAC de destino, os dados e uma verificação de erros (FCS).</li>
-                <li><strong>Protocolo ARP (Address Resolution Protocol):</strong> Quando um dispositivo conhece o endereço IP de destino mas não sabe o endereço MAC correspondente, ele envia uma mensagem ARP em broadcast (para todos na rede) perguntando: "Quem tem o IP 192.168.1.20?". O dispositivo com esse IP responde com seu endereço MAC.</li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Seu PC (IP 192.168.1.10) quer enviar dados para a impressora (IP 192.168.1.20). Ele usa o ARP para descobrir o MAC da impressora. Em seguida, cria um frame com o MAC de destino da impressora e o envia para o switch, que se encarrega de entregar na porta correta.</p>
-        `
-    },
-    // Módulo 2 do Curso
-    'course_2_1': {
-        title: '2.1: Configuração Básica de Switches Cisco',
-        content: `
-            <h3>O que é?</h3>
-            <p>Esta aula foca em como acessar e configurar um switch Cisco pela primeira vez usando a CLI (Command Line Interface). Um switch é o dispositivo central de uma LAN, responsável por conectar os dispositivos finais e encaminhar o tráfego de forma inteligente.</p>
-            <h4>Analogia</h4>
-            <p>Pense no switch como o gerente de um andar de um prédio de escritórios. Ele sabe exatamente em qual sala (porta) cada funcionário (dispositivo) está. Quando uma correspondência chega para um funcionário específico, o gerente a entrega diretamente na sala correta, sem incomodar os outros.</p>
-            <h4>Detalhes Técnicos - Acesso e Modos de Configuração</h4>
-            <ul>
-                <li><strong>Acesso via Console:</strong> A primeira configuração é feita conectando um cabo de console do PC diretamente ao switch.</li>
-                <li><strong>Modos da CLI:</strong>
-                    <ul>
-                        <li><strong>Modo de Usuário (<code>Switch></code>):</strong> Acesso inicial, com comandos limitados.</li>
-                        <li><strong>Modo Privilegiado (<code>Switch#</code>):</strong> Acesso completo. Comando para entrar: <code>enable</code>.</li>
-                        <li><strong>Modo de Configuração Global (<code>Switch(config)#</code>):</strong> Onde as configurações gerais são feitas. Comando: <code>configure terminal</code>.</li>
-                        <li><strong>Modos de Configuração Específicos:</strong> Como <code>Switch(config-if)#</code> (interfaces) ou <code>Switch(config-line)#</code> (linhas de acesso).</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (Comandos Essenciais)</h4>
-            <pre><code>! Entra no modo de configuração global
-Switch> enable
-Switch# configure terminal
-
-! Define um nome para o switch (hostname)
-Switch(config)# hostname SW-ANDAR-1
-
-! Define uma senha para o modo privilegiado (segurança)
-SW-ANDAR-1(config)# enable secret cisco123
-
-! Configura uma senha para o acesso via console
-SW-ANDAR-1(config)# line console 0
-SW-ANDAR-1(config-line)# password senhaconsole
-SW-ANDAR-1(config-line)# login
-
-! Configura um IP de gerenciamento para acesso remoto (via Telnet/SSH)
-! Switches L2 não têm IP em portas físicas, apenas em interfaces virtuais (SVI)
-SW-ANDAR-1(config)# interface vlan 1
-SW-ANDAR-1(config-if)# ip address 192.168.1.2 255.255.255.0
-SW-ANDAR-1(config-if)# no shutdown
-
-! Salva a configuração
-SW-ANDAR-1# copy running-config startup-config</code></pre>
-        `
-    },
-    'course_2_2': {
-        title: '2.2: Conceitos Fundamentais de VLANs',
-        content: `
-            <h3>O que é?</h3>
-            <p>Uma VLAN (Virtual LAN) é uma rede local virtual. Ela permite dividir um único switch físico em múltiplos switches virtuais, criando redes logicamente separadas.</p>
-            <h4>Analogia</h4>
-            <p>Imagine um grande salão de festas (o switch físico). Com as VLANs, você pode usar divisórias para criar várias festas menores e independentes dentro do mesmo salão. Pessoas de uma festa (VLAN 10) não podem interagir com pessoas de outra festa (VLAN 20), a menos que um segurança (roteador) autorize a passagem.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Domínio de Broadcast:</strong> Cada VLAN é um domínio de broadcast separado. Isso significa que uma mensagem de broadcast enviada em uma VLAN só será ouvida pelos dispositivos daquela VLAN, reduzindo o tráfego desnecessário na rede.</li>
-                <li><strong>Benefícios:</strong>
-                    <ul>
-                        <li><strong>Segurança:</strong> Isola o tráfego de diferentes departamentos (ex: RH não vê o tráfego do Financeiro).</li>
-                        <li><strong>Organização:</strong> Agrupa dispositivos por função, não por localização física.</li>
-                        <li><strong>Performance:</strong> Reduz o tráfego de broadcast, melhorando o desempenho geral da rede.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (Criação de VLANs)</h4>
-            <pre><code>! Entra no modo de configuração global
-Switch(config)#
-
-! Cria a VLAN 10 e dá um nome a ela
-Switch(config)# vlan 10
-Switch(config-vlan)# name VENDAS
-
-! Cria a VLAN 20 e dá um nome a ela
-Switch(config)# vlan 20
-Switch(config-vlan)# name TI
-
-! Atribui a porta FastEthernet0/1 à VLAN 10
-Switch(config)# interface FastEthernet0/1
-Switch(config-if)# switchport mode access
-Switch(config-if)# switchport access vlan 10
-
-! Atribui a porta FastEthernet0/2 à VLAN 20
-Switch(config)# interface FastEthernet0/2
-Switch(config-if)# switchport mode access
-Switch(config-if)# switchport access vlan 20</code></pre>
-        `
-    },
-    'course_2_3': {
-        title: '2.3: Trunking (802.1Q) e Roteamento Inter-VLAN',
-        content: `
-            <h3>O que são?</h3>
-            <p><strong>Trunking:</strong> É um método que permite que o tráfego de múltiplas VLANs passe por um único link físico, geralmente entre dois switches ou entre um switch e um roteador.</p>
-            <p><strong>Roteamento Inter-VLAN:</strong> É o processo que permite a comunicação entre diferentes VLANs, que por padrão são isoladas.</p>
-            <h4>Analogia</h4>
-            <ul>
-                <li><strong>Trunking:</strong> Pense em um ônibus escolar que transporta crianças de várias turmas (VLANs). Cada criança usa um crachá com a cor da sua turma (a "tag" da VLAN). O ônibus (o link trunk) sabe exatamente em qual sala (VLAN de destino) deixar cada criança.</li>
-                <li><strong>Roteamento Inter-VLAN:</strong> É o "inspetor" do corredor da escola (o roteador). Se um aluno da turma A (VLAN 10) precisa falar com um da turma B (VLAN 20), ele precisa pedir permissão ao inspetor, que o guiará até a outra sala.</li>
-            </ul>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Protocolo 802.1Q:</strong> É o padrão de mercado para trunking. Ele adiciona uma "tag" (etiqueta) de 4 bytes ao frame Ethernet, que contém o ID da VLAN.</li>
-                <li><strong>Porta de Acesso (access):</strong> Pertence a uma única VLAN. Conecta dispositivos finais.</li>
-                <li><strong>Porta Trunk (trunk):</strong> Transporta múltiplas VLANs. Conecta switches a switches ou switches a roteadores.</li>
-                <li><strong>Router-on-a-Stick:</strong> É a técnica mais comum para roteamento Inter-VLAN. Consiste em criar subinterfaces lógicas em uma única interface física do roteador, uma para cada VLAN.</li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (Trunk e Router-on-a-Stick)</h4>
-            <pre><code>! No Switch, configurar a porta que conecta ao roteador como Trunk
-Switch(config)# interface GigabitEthernet0/1
-Switch(config-if)# switchport mode trunk
-
-! No Roteador, criar subinterfaces para cada VLAN
-Router(config)# interface GigabitEthernet0/0.10
-! Subinterface para a VLAN 10
-Router(config-subif)# encapsulation dot1q 10
-! Informa que esta subinterface pertence à VLAN 10
-Router(config-subif)# ip address 192.168.10.1 255.255.255.0
-! Gateway da VLAN 10
-
-Router(config)# interface GigabitEthernet0/0.20
-! Subinterface para a VLAN 20
-Router(config-subif)# encapsulation dot1q 20
-Router(config-subif)# ip address 192.168.20.1 255.255.255.0
-! Gateway da VLAN 20
-
-! Ativar a interface física principal
-Router(config)# interface GigabitEthernet0/0
-Router(config-if)# no shutdown</code></pre>
-        `
-    },
-    'course_2_4': {
-        title: '2.4: Spanning Tree Protocol (STP)',
-        content: `
-            <h3>O que é?</h3>
-            <p>O STP é um protocolo de Camada 2 que previne a ocorrência de loops de switching em redes com links redundantes (caminhos múltiplos).</p>
-            <h4>Analogia</h4>
-            <p>Imagine uma cidade com várias pontes conectando duas margens de um rio. Se não houver regras de trânsito, os carros podem ficar andando em círculos para sempre (o loop). O STP atua como um agente de trânsito que bloqueia temporariamente uma das pontes para garantir que haja apenas um caminho ativo por vez, evitando o caos. Se a ponte principal cair, ele libera a ponte bloqueada para manter a cidade conectada.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Loops de Switching:</strong> Ocorrem quando há mais de um caminho entre dois switches. Isso causa "Broadcast Storms" (tempestades de broadcast), onde frames de broadcast são reenviados infinitamente, consumindo toda a CPU dos switches e paralisando a rede.</li>
-                <li><strong>Como o STP Funciona:</strong>
-                    <ol>
-                        <li><strong>Eleição do Root Bridge:</strong> Os switches trocam mensagens (BPDUs) para eleger um "switch raiz" (Root Bridge), que será o ponto de referência da rede.</li>
-                        <li><strong>Definição de Portas:</strong> Cada switch determina o melhor caminho para o Root Bridge. As portas que fazem parte desse caminho são colocadas no estado de Encaminhamento (Forwarding).</li>
-                        <li><strong>Bloqueio de Portas:</strong> As portas que criam caminhos redundantes (e poderiam causar loops) são colocadas no estado de Bloqueio (Blocking).</li>
-                    </ol>
-                </li>
-                <li><strong>RSTP (Rapid Spanning Tree Protocol):</strong> Uma versão mais moderna e rápida do STP, que converge muito mais rápido (em segundos, em vez de até 50 segundos). É o padrão na maioria dos switches modernos.</li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Em uma topologia com dois switches conectados por dois cabos, o STP irá eleger um Root Bridge e, em seguida, bloquear uma das portas em um dos switches para que apenas um dos cabos seja usado para encaminhar o tráfego, evitando o loop. Se o cabo ativo falhar, a porta bloqueada se tornará ativa.</p>
-        `
-    },
-    // Módulo 3 do Curso
-    'course_3_1': {
-        title: '3.1: Endereçamento IPv4 e Sub-redes',
-        content: `
-            <h3>O que é?</h3>
-            <p>O Endereçamento IPv4 é o sistema que dá um endereço lógico e único (como 192.168.1.10) a cada dispositivo em uma rede. As sub-redes são uma técnica para dividir uma grande rede IP em redes menores e mais gerenciáveis.</p>
-            <h4>Analogia</h4>
-            <p>Pense no endereço IP como o endereço completo de uma casa: <strong>Cidade X (Rede Principal)</strong>, <strong>Bairro Centro (Sub-rede)</strong>, <strong>Rua das Flores, 10 (Host)</strong>. A Máscara de Sub-rede é como o CEP, que diz ao carteiro qual parte do endereço é a cidade/bairro e qual é a casa.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Endereço IPv4:</strong> Um endereço de 32 bits, dividido em 4 octetos (ex: <code>192.168.1.1</code>).</li>
-                <li><strong>Máscara de Sub-rede:</strong> Define qual parte do endereço IP é a rede e qual é o host. Ex: <code>255.255.255.0</code> (ou <code>/24</code>) significa que os 3 primeiros octetos são da rede.</li>
-                <li><strong>Cálculo de Sub-redes (Subnetting):</strong> É o processo de "pegar emprestado" bits da porção de host para criar mais porções de rede (as sub-redes).</li>
-                <li><strong>VLSM (Variable Length Subnet Mask):</strong> Permite criar sub-redes de tamanhos diferentes, evitando o desperdício de IPs.</li>
-            </ul>
-            <h4>Exemplo Prático (Cálculo de Sub-redes)</h4>
-            <p><strong>Cenário:</strong> Você recebe a rede <code>192.168.10.0/24</code> e precisa criar 4 sub-redes.</p>
-            <p><strong>Lógica:</strong> Para ter 4 sub-redes, você precisa de 2 bits "emprestados" da porção de host (porque 2² = 4). A nova máscara será <code>/26</code> (24 + 2).</p>
-            <p>As 4 Sub-redes criadas serão:</p>
-            <ul>
-                <li><code>192.168.10.0/26</code></li>
-                <li><code>192.168.10.64/26</code></li>
-                <li><code>192.168.10.128/26</code></li>
-                <li><code>192.168.10.192/26</code></li>
-            </ul>
-        `
-    },
-    'course_3_2': {
-        title: '3.2: Roteamento Estático e Rota Padrão',
-        content: `
-            <h3>O que é?</h3>
-            <p><strong>Roteamento Estático:</strong> É o processo de configurar manualmente as rotas em um roteador. O administrador informa: "Para chegar na rede X, envie os pacotes para o roteador Y".</p>
-            <p><strong>Rota Padrão:</strong> É uma rota especial (<code>0.0.0.0/0</code>) que diz ao roteador para onde enviar todo o tráfego cujo destino ele não conhece. É o "caminho de último recurso", geralmente apontando para a Internet.</p>
-            <h4>Analogia</h4>
-            <ul>
-                <li><strong>Rota Estática:</strong> Um guarda de trânsito te dá uma instrução específica: "Para ir ao Shopping, pegue a Avenida Principal."</li>
-                <li><strong>Rota Padrão:</strong> Se você pergunta por um endereço que ele não conhece, ele te diz: "Não sei, mas pegue a rodovia principal (a Rota Padrão) que ela te leva para fora da cidade."</li>
-            </ul>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Vantagens do Roteamento Estático:</strong> Seguro, previsível e consome menos CPU.</li>
-                <li><strong>Desvantagens:</strong> Não é escalável. Se uma rota cair, o administrador precisa intervir manualmente.</li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (Cisco IOS)</h4>
-            <pre><code>! Roteador R1
-
-! Configura uma rota estática para a rede 10.20.30.0/24,
-! informando que o próximo salto (next-hop) é o roteador com IP 192.168.1.2
-R1(config)# ip route 10.20.30.0 255.255.255.0 192.168.1.2
-
-! Configura uma rota padrão para todo o tráfego desconhecido,
-! enviando-o para o roteador da operadora de internet com IP 200.100.50.1
-R1(config)# ip route 0.0.0.0 0.0.0.0 200.100.50.1</code></pre>
-        `
-    },
-    'course_3_3': {
-        title: '3.3: Roteamento Dinâmico: Introdução ao OSPF',
-        content: `
-            <h3>O que é?</h3>
-            <p>O Roteamento Dinâmico é um processo onde os roteadores "conversam" entre si para descobrir e compartilhar rotas automaticamente. O <strong>OSPF (Open Shortest Path First)</strong> é um dos protocolos mais populares para isso.</p>
-            <h4>Analogia</h4>
-            <p>Pense no Waze ou Google Maps. Em vez de seguir uma rota fixa (estática), o aplicativo analisa o trânsito em tempo real (as "conversas" entre roteadores) e te mostra o melhor caminho dinamicamente. Se uma rua fica congestionada (um link cai), ele recalcula a rota automaticamente.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Protocolo Link-State:</strong> Cada roteador informa a todos os outros sobre seus links diretos e o estado deles.</li>
-                <li><strong>Adjacência de Vizinhos:</strong> Roteadores OSPF na mesma rede estabelecem uma relação de vizinhança para trocar informações.</li>
-                <li><strong>Custo:</strong> O OSPF usa uma métrica chamada "custo" para determinar o melhor caminho. O custo é inversamente proporcional à largura de banda (links mais rápidos têm custo menor).</li>
-                <li><strong>Áreas:</strong> Em redes grandes, o OSPF pode ser dividido em áreas para otimizar a troca de informações. A área principal é a Área 0 (backbone).</li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (OSPF de Área Única)</h4>
-            <pre><code>! Roteador R1
-
-! Habilita o processo OSPF com um ID de processo (ex: 1)
-R1(config)# router ospf 1
-
-! Define um ID para o roteador (geralmente o IP de uma interface de loopback)
-R1(config-router)# router-id 1.1.1.1
-
-! Anuncia as redes que estão diretamente conectadas a este roteador
-! A máscara wildcard é o inverso da máscara de sub-rede
-R1(config-router)# network 192.168.1.0 0.0.0.255 area 0
-R1(config-router)# network 10.0.0.0 0.0.0.3 area 0</code></pre>
-        `
-    },
-    'course_3_4': {
-        title: '3.4: Endereçamento IPv6',
-        content: `
-            <h3>O que é?</h3>
-            <p>O IPv6 é a versão mais recente do Protocolo de Internet, criado para resolver o esgotamento dos endereços IPv4. Ele usa endereços de 128 bits, o que oferece um número praticamente infinito de endereços.</p>
-            <h4>Analogia</h4>
-            <p>Se o IPv4 é o número de placas de carro de uma cidade, que um dia se esgotam, o IPv6 é como adicionar muito mais letras e números às placas, permitindo que existam trilhões de combinações, resolvendo o problema para sempre.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Formato:</strong> 8 grupos de 4 dígitos hexadecimais, separados por dois pontos (ex: <code>2001:0DB8:85A3:0000:0000:8A2E:0370:7334</code>).</li>
-                <li><strong>Regras de Abreviação:</strong>
-                    <ul>
-                        <li>Zeros à esquerda em cada grupo podem ser omitidos (<code>0DB8</code> vira <code>DB8</code>).</li>
-                        <li>Um único bloco contínuo de zeros pode ser substituído por <code>::</code> (<code>...:0000:0000:...</code> vira <code>...::...</code>).</li>
-                    </ul>
-                </li>
-                <li><strong>Tipos de Endereço:</strong>
-                    <ul>
-                        <li><strong>Global Unicast (GUA):</strong> Endereço público, roteável na Internet. Começa com <code>2</code> ou <code>3</code>.</li>
-                        <li><strong>Link-Local (LLA):</strong> Usado apenas para comunicação na mesma rede local. Começa com <code>FE80::</code>.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo de Configuração Prática (Cisco IOS)</h4>
-            <pre><code>! Habilita o roteamento IPv6 no roteador
-Router(config)# ipv6 unicast-routing
-
-! Configura um endereço IPv6 em uma interface
-Router(config)# interface GigabitEthernet0/0
-Router(config-if)# ipv6 address 2001:DB8:ACAD:1::1/64
-Router(config-if)# no shutdown</code></pre>
-        `
-    },
-    // Módulo 5 do Curso
-    'course_5_1': {
-        title: '5.1: Arquitetura e Redundância (FHRP)',
-        content: `
-            <h3>O que é?</h3>
-            <p>Esta aula aborda o design hierárquico de redes, um modelo para construir redes escaláveis, confiáveis e fáceis de gerenciar. Também introduz os FHRPs (First Hop Redundancy Protocols), que garantem que a rede continue funcionando mesmo se o gateway padrão falhar.</p>
-            <h4>Analogia</h4>
-            <ul>
-                <li><strong>Design Hierárquico:</strong> Pense na organização de uma cidade. Você tem as ruas locais dos bairros (Camada de Acesso), as avenidas principais (Camada de Distribuição) e as super-rodovias que conectam a outras cidades (Camada de Core).</li>
-                <li><strong>FHRP:</strong> Imagine que a saída do seu bairro tem duas pontes. O FHRP faz as duas pontes parecerem uma só. Se uma cair, o tráfego é desviado para a outra, sem que os motoristas percebam.</li>
-            </ul>
-            <h4>Detalhes Técnicos - Modelo Hierárquico de 3 Camadas</h4>
-            <ul>
-                <li><strong>Camada de Acesso (Access Layer):</strong> Onde os dispositivos finais se conectam à rede. Foco em segurança de porta, VLANs.</li>
-                <li><strong>Camada de Distribuição (Distribution Layer):</strong> O ponto de agregação para a camada de acesso. Aplica políticas (ACLs, roteamento entre VLANs, QoS).</li>
-                <li><strong>Camada de Core (Core Layer):</strong> O backbone da rede. Sua única função é encaminhar pacotes o mais rápido possível.</li>
-            </ul>
-            <h4>Detalhes Técnicos - FHRPs</h4>
-            <p>Protocolos como <strong>HSRP (Hot Standby Router Protocol)</strong> e <strong>VRRP (Virtual Router Redundancy Protocol)</strong> permitem que dois ou mais roteadores compartilhem um endereço IP e MAC virtuais. Um roteador atua como ativo e o outro como standby. Se o ativo falhar, o standby assume instantaneamente.</p>
-            <h4>Exemplo Prático</h4>
-            <p>Em uma rede corporativa, switches de acesso se conectam a dois switches de distribuição rodando HSRP/VRRP para um gateway redundante. Ambos se conectam ao switch de core, que se conecta à Internet.</p>
-        `
-    },
-    'course_5_2': {
-        title: '5.2: Qualidade de Serviço (QoS)',
-        content: `
-            <h3>O que é?</h3>
-            <p>QoS (Qualidade de Serviço) é um conjunto de técnicas para gerenciar recursos da rede e garantir que o tráfego mais importante (como voz e vídeo) tenha prioridade sobre o tráfego menos crítico (e-mails, downloads).</p>
-            <h4>Analogia</h4>
-            <p>Pense em uma rodovia com várias faixas. O QoS cria uma "faixa expressa" exclusiva para ambulâncias e viaturas (tráfego de voz/vídeo), garantindo que não fiquem presas no trânsito comum, mesmo em horários de pico.</p>
-            <h4>Detalhes Técnicos</h4>
-            <p>Aplicações em tempo real, como VoIP, são sensíveis a atraso (latência) e variação no atraso (jitter). O QoS garante que esses pacotes "passem na frente".</p>
-            <h5>Como o QoS funciona:</h5>
-            <ol>
-                <li><strong>Classificação e Marcação:</strong> O tráfego é identificado (ex: pacotes de VoIP) e "marcado" com um valor de prioridade (usando campos como DSCP no cabeçalho IP).</li>
-                <li><strong>Enfileiramento (Queuing):</strong> Quando há congestionamento, o roteador usa filas para organizar os pacotes. Pacotes de alta prioridade são colocados em filas preferenciais e enviados primeiro.</li>
-                <li><strong>Policiamento e Modelagem (Policing and Shaping):</strong> Técnicas para limitar a taxa de tráfego, evitando que uma aplicação consuma toda a banda.</li>
-            </ol>
-            <h4>Exemplo Prático</h4>
-            <p>Em um escritório, o QoS é configurado para marcar o tráfego de telefonia IP com a prioridade mais alta. Assim, mesmo com downloads pesados, a qualidade das chamadas de voz não é afetada.</p>
-        `
-    },
-    'course_5_3': {
-        title: '5.3: Virtualização e Automação (SDN, APIs)',
-        content: `
-            <h3>O que é?</h3>
-            <p>Esta aula introduz as tecnologias que estão revolucionando o gerenciamento de redes.</p>
-            <ul>
-                <li><strong>Virtualização de Rede:</strong> Criar redes virtuais que rodam sobre uma infraestrutura física compartilhada.</li>
-                <li><strong>Automação de Rede:</strong> Usar scripts e softwares para configurar, gerenciar e monitorar dispositivos automaticamente.</li>
-                <li><strong>SDN (Software-Defined Networking):</strong> Uma arquitetura que separa o "cérebro" da rede (Plano de Controle) do "corpo" (Plano de Dados). Uma controladora central gerencia a rede de forma holística.</li>
-            </ul>
-            <h4>Analogia</h4>
-            <p><strong>Rede Tradicional:</strong> Cada guarda de trânsito decide com base no que vê ao seu redor. <br/><strong>Rede SDN:</strong> Uma central de controle com câmeras por toda a cidade analisa o fluxo geral e envia instruções para cada guarda otimizar o trânsito da cidade inteira.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>APIs (Application Programming Interfaces):</strong> São as "linguagens" que os softwares usam para conversar. APIs como REST permitem que scripts e controladoras SDN configurem roteadores e switches.</li>
-                <li><strong>Ferramentas de Automação:</strong>
-                    <ul>
-                        <li><strong>Ansible:</strong> Usa "playbooks" (arquivos de receita em YAML) para configurar múltiplos dispositivos de uma vez.</li>
-                        <li><strong>Python:</strong> Linguagem popular para automação com bibliotecas como Netmiko e Paramiko.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Em vez de um analista se conectar a 50 switches para atualizar uma VLAN, ele roda um playbook do Ansible que faz a alteração em todos os 50 switches automaticamente em segundos.</p>
-        `
-    },
-    'course_5_4': {
-        title: '5.4: Preparação para o Exame',
-        content: `
-            <h3>O que é?</h3>
-            <p>A etapa final, onde todo o conhecimento adquirido é testado e consolidado. O objetivo é se familiarizar com o estilo e a dificuldade das questões do exame CCNA e identificar pontos fracos para revisão.</p>
-            <h4>Analogia</h4>
-            <p>É o "simulado da autoescola" antes da prova de direção final. Você passa por todas as manobras em um ambiente controlado para ganhar confiança e corrigir erros antes do exame real.</p>
-            <h4>Detalhes Técnicos</h4>
-            <ul>
-                <li><strong>Domínios do Exame:</strong> O exame CCNA 200-301 é dividido em domínios com pesos diferentes. É importante focar nos que têm maior peso.</li>
-                <li><strong>Tipos de Questão:</strong> O exame pode ter questões de múltipla escolha, arrastar e soltar (drag-and-drop) e laboratórios de simulação (simlets).</li>
-                <li><strong>Gerenciamento de Tempo:</strong> É crucial praticar com simulados cronometrados para aprender a gerenciar o tempo durante a prova.</li>
-            </ul>
-            <h4>Exemplo Prático</h4>
-            <p>Usar plataformas de simulados como Boson ExSim ou da própria Cisco Networking Academy para fazer provas completas, revisar cada resposta e focar os estudos finais nas áreas com menor pontuação.</p>
-        `
+      content: `<p>Use esta ferramenta para calcular todos os detalhes de uma rede a partir de um endereço IP e seu prefixo CIDR (ex: 192.168.1.0/24).</p>`
     }
 };

@@ -14,8 +14,8 @@ interface QuizViewProps {
 }
 
 const translations = {
-    en: { mainTitle: "CCNAPro Quiz" },
-    pt: { mainTitle: "CCNAPro Quiz" }
+    en: { mainTitle: "Academia da Rede - Quiz" },
+    pt: { mainTitle: "Academia da Rede - Quiz" }
 };
 
 const QuizView = ({ onBackToGuide }: QuizViewProps) => {
@@ -92,7 +92,7 @@ const QuizView = ({ onBackToGuide }: QuizViewProps) => {
                     />
                 </div>
                  <footer>
-                    <p>&copy; 2024 Maicon Gois. Todos os direitos reservados.&reg;</p>
+                    <p>&copy; 2024 Academia da Rede. Desenvolvido por Maicon Gois.&reg;</p>
                 </footer>
             </div>
         </div>

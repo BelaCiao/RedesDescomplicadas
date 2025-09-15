@@ -1,6 +1,7 @@
 import React, { useState, MouseEvent } from 'react';
 import { topicsData, termsData } from '../data/content';
 import CidrCalculator from './CidrCalculator';
+import AIResponder from './AIResponder';
 
 interface GuideViewProps {
   onStartQuiz: () => void;
@@ -13,50 +14,120 @@ type ModalTerm = {
 } | null;
 
 const courseStructure = [
-    {
-        title: "Módulo 1: Fundamentos Essenciais",
-        lessons: [
-            { id: "course_1_1", title: "1.1: Introdução às Redes Modernas" },
-            { id: "course_1_2", title: "1.2: Modelos OSI e TCP/IP" },
-            { id: "course_1_3", title: "1.3: Camada Física e Numeração" },
-            { id: "course_1_4", title: "1.4: Camada de Enlace e MAC" },
-        ],
-    },
-    {
-        title: "Módulo 2: Switching e LAN",
-        lessons: [
-            { id: "course_2_1", title: "2.1: Config. Básica de Switches" },
-            { id: "course_2_2", title: "2.2: Conceitos de VLANs" },
-            { id: "course_2_3", title: "2.3: Trunking e Inter-VLAN" },
-            { id: "course_2_4", title: "2.4: Spanning Tree Protocol (STP)" },
-        ],
-    },
-    {
-        title: "Módulo 3: Roteamento IP",
-        lessons: [
-            { id: "course_3_1", title: "3.1: Endereçamento IPv4 e Sub-redes" },
-            { id: "course_3_2", title: "3.2: Roteamento Estático e Padrão" },
-            { id: "course_3_3", title: "3.3: Roteamento Dinâmico: OSPF" },
-            { id: "course_3_4", title: "3.4: Endereçamento IPv6" },
-        ],
-    },
-    {
-        title: "Módulo 5: Tópicos Avançados",
-        lessons: [
-            { id: "course_5_1", title: "5.1: Arquitetura e Redundância (FHRP)" },
-            { id: "course_5_2", title: "5.2: Qualidade de Serviço (QoS)" },
-            { id: "course_5_3", title: "5.3: Virtualização e Automação" },
-            { id: "course_5_4", title: "5.4: Preparação para o Exame" },
-        ],
-    },
+    { title: "Módulo 1: Ponto de Partida", lessons: [
+        { id: "boas_vindas_1", title: "Boas-vindas à Sua Jornada" }
+    ]},
+    { title: "Módulo 2: Fundamentos Essenciais", lessons: [
+        { id: "introducao_redes_1", title: "Decifrando as Redes" },
+        { id: "introducao_redes_2", title: "O Propósito da Conectividade" },
+        { id: "introducao_redes_3", title: "Desenhando a Rede: Topologias" },
+        { id: "introducao_redes_4", title: "Conhecendo os Equipamentos" },
+        { id: "introducao_redes_5", title: "Classificação por Escala" },
+        { id: "introducao_redes_6", title: "IPs: Endereços Públicos vs. Privados" },
+        { id: "introducao_redes_7", title: "A Função da Máscara de Sub-rede" },
+        { id: "introducao_redes_8", title: "Protocolos: A Linguagem da Rede" },
+        { id: "introducao_redes_9", title: "Anatomia de uma Rede" },
+        { id: "introducao_redes_10", title: "DNS: A Agenda de Contatos da Web" },
+        { id: "introducao_redes_11", title: "Modelo OSI: As 7 Camadas" },
+        { id: "introducao_redes_12", title: "O Papel dos Servidores" },
+        { id: "introducao_redes_13", title: "VPN: Seu Túnel Seguro" },
+        { id: "introducao_redes_14", title: "DMZ: A Zona de Segurança" },
+        { id: "introducao_redes_15", title: "Proxy: O Intermediário Inteligente" },
+        { id: "introducao_redes_16", title: "Acesso Remoto: SSH vs. Telnet" },
+        { id: "introducao_redes_17", title: "Firewall: O Guardião Digital" },
+        { id: "introducao_redes_18", title: "Entendendo o CGNAT" },
+        { id: "introducao_redes_19", title: "Ping: O Teste de Conexão" },
+        { id: "introducao_redes_20", title: "Modos de Roteador: Router vs. Bridge" },
+        { id: "introducao_redes_21", title: "A Arte de Crimpar Cabos" }
+    ]},
+    { title: "Módulo 3: Laboratório Virtual com EVE-NG", lessons: [
+        { id: "eve_ng_1", title: "Instalando o EVE-NG" },
+        { id: "eve_ng_2", title: "Primeiros Passos e Soluções" },
+        { id: "eve_ng_3", title: "Adicionando o Mikrotik ao Lab" },
+        { id: "eve_ng_4", title: "Acesso com Winbox e Erros Comuns" }
+    ]},
+    { title: "Módulo 4: Dominando o Mikrotik - Básico", lessons: [
+        { id: "mikrotik_1_1", title: "Introdução ao RouterOS" },
+        { id: "mikrotik_1_2", title: "Interfaces de Gerenciamento" },
+        { id: "mikrotik_1_3", title: "Configurando Endereços IP" },
+        { id: "mikrotik_1_4", title: "Gerenciamento de Usuários e Senhas" },
+        { id: "mikrotik_1_5", title: "Sincronizando o Horário com NTP" },
+        { id: "mikrotik_1_6", title: "Atualização e Downgrade do Sistema" },
+        { id: "mikrotik_1_7", title: "Estratégias de Backup" },
+        { id: "mikrotik_1_8", title: "Automatizando Backups" },
+        { id: "mikrotik_1_9", title: "Enviando Backups por E-mail" },
+        { id: "mikrotik_1_10", title: "DHCP: Cliente e Servidor" },
+        { id: "mikrotik_1_11", title: "Unificando Portas com Bridge" },
+        { id: "mikrotik_1_12", title: "Rotas Estáticas e VPNs" },
+        { id: "mikrotik_1_13", title: "Descobrindo Dispositivos Vizinhos" },
+        { id: "mikrotik_1_14", title: "Controle de Banda (QoS)" },
+        { id: "mikrotik_1_15", title: "Redirecionamento de Portas (NAT)" },
+        { id: "mikrotik_1_16", title: "Firewall: Regras Essenciais" },
+        { id: "mikrotik_1_17", title: "Monitoramento com SNMP" },
+        { id: "mikrotik_1_18", title: "A Importância de Documentar" },
+        { id: "mikrotik_1_19", title: "Analisando Uso de CPU" },
+        { id: "mikrotik_1_20", title: "Configuração Padrão para Clientes" }
+    ]},
+    { title: "Módulo 5: Dominando o Mikrotik - Avançado", lessons: [
+        { id: "mikrotik_2_1", title: "Túneis EoIP: Estendendo a Camada 2" },
+        { id: "mikrotik_2_2", title: "OSPF: Roteamento Dinâmico - Parte 1" },
+        { id: "mikrotik_2_3", title: "OSPF: Roteamento Dinâmico - Parte 2" },
+        { id: "mikrotik_2_4", title: "VPN Segura com L2TP/IPsec" },
+        { id: "mikrotik_2_5", title: "Análise de Tráfego com Torch" },
+        { id: "mikrotik_2_6", title: "Segmentação de Rede com VLANs" },
+        { id: "mikrotik_2_7", title: "Failover de Link com Netwatch" },
+        { id: "mikrotik_2_8", title: "Recuperando RouterBOARDS com Netinstall" }
+    ]},
+    { title: "Módulo 6: BGP e o Universo dos ISPs", lessons: [
+        { id: "bgp_1", title: "Como a Internet Realmente Funciona" },
+        { id: "bgp_2", title: "Ecossistema: PTT, CDN e NIC.br" },
+        { id: "bgp_3", title: "Explorando o Menu BGP no RouterOS" },
+        { id: "bgp_4", title: "Estabelecendo a Primeira Sessão BGP" },
+        { id: "bgp_5", title: "Filtragem de Rotas: Boas Práticas" }
+    ]},
+    { title: "Módulo 7: Servidores com Linux", lessons: [
+        { id: "linux_1", title: "Introdução ao Mundo Linux" },
+        { id: "linux_2", title: "Instalando um Servidor Linux" },
+        { id: "linux_3", title: "Comandos Essenciais do Terminal" },
+        { id: "linux_4", title: "Aumentando a Segurança do SSH" },
+        { id: "linux_5", title: "Monitoramento com Zabbix" },
+        { id: "linux_6", title: "Dashboards com Grafana" },
+        { id: "linux_7", title: "Integrando Zabbix e Grafana" },
+        { id: "linux_8", title: "Traduzindo a Interface do Zabbix" },
+        { id: "linux_9", title: "Recuperação de Senha do Zabbix" },
+        { id: "linux_10", title: "Implementando um DNS Recursivo" }
+    ]},
+    { title: "Módulo 8: Segurança de Perímetro", lessons: [
+        { id: "firewall_1", title: "Estratégias de Firewall Corporativo" }
+    ]},
+    { title: "Módulo 9: Cenários de Provedor (ISP)", lessons: [
+        { id: "provedor_1", title: "LAB: Roteamento Interno com OSPF" },
+        { id: "provedor_2", title: "Autenticação de Clientes com PPPoE" },
+        { id: "provedor_3", title: "Instalando o MK-Auth no EVE-NG" },
+        { id: "provedor_4", title: "Solucionando a Instalação do MK-Auth" },
+        { id: "provedor_5", title: "Integração Radius com MK-Auth" }
+    ]},
+    { title: "Módulo 10: Equipamentos de Grande Porte", lessons: [
+        { id: "huawei_1", title: "Adicionando Imagem Huawei no EVE-NG" }
+    ]},
+    { title: "Módulo 11: Semana do Analista de Redes", lessons: [
+        { id: "semana_1", title: "Revisão Intensiva - Aula 1" },
+        { id: "semana_2", title: "Revisão Intensiva - Aula 2" },
+        { id: "semana_3", title: "Revisão Intensiva - Aula 3" },
+        { id: "semana_4", title: "Atualização: Mikrotik no EVE-NG" }
+    ]},
+    { title: "Módulo 12: Tópicos Extras", lessons: [
+        { id: "extras_1", title: "Estudo de Caso: Ataque DDoS" },
+        { id: "extras_2", title: "Bloqueando Sites via Arquivo Hosts" }
+    ]},
+    { title: "Módulo 13: Ferramentas", lessons: [
+        { id: "cidr_calculator", title: "Calculadora CIDR" }
+    ]}
 ];
-
-const quickGuideTopics = Object.keys(topicsData)
-    .filter(k => !k.startsWith('course_') && !['cidr_calculator', 'zabbix'].includes(k));
 
 
 const GuideView = ({ onStartQuiz }: GuideViewProps) => {
-  const [activeTopic, setActiveTopic] = useState('course_1_1');
+  const [activeTopic, setActiveTopic] = useState('boas_vindas_1');
   const [modalTerm, setModalTerm] = useState<ModalTerm>(null);
 
   const handleContentClick = (e: MouseEvent<HTMLElement>) => {
@@ -74,18 +145,22 @@ const GuideView = ({ onStartQuiz }: GuideViewProps) => {
       return (
         <>
             <h2>{topicsData.cidr_calculator.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: topicsData.cidr_calculator.content }} />
             <CidrCalculator />
         </>
       )
     }
+
     const topic = topicsData[activeTopic];
     if (!topic) {
       return <h2>Tópico não encontrado</h2>;
     }
+    
     return (
       <>
         <h2>{topic.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: topic.content }} />
+        <AIResponder topicTitle={topic.title} />
       </>
     );
   };
@@ -94,16 +169,16 @@ const GuideView = ({ onStartQuiz }: GuideViewProps) => {
     <div id="guide-view">
       <header className="main-header">
         <div className="header-content">
-          <h1>Redes - Do campo ao NOC</h1>
-          <p>Seu guia prático, do campo ao Network Operation Center.</p>
+          <h1>Academia da Rede</h1>
+          <p>Domine os conceitos de redes, do básico ao avançado, com nosso guia interativo.</p>
         </div>
-        <button className="quiz-button" onClick={onStartQuiz}>Praticar com Quiz</button>
+        <button className="quiz-button" onClick={onStartQuiz}>Praticar com Quiz CCNA</button>
       </header>
 
       <div className="container">
         <aside className="sidebar">
           <nav>
-            <h3>Curso Preparatório CCNA</h3>
+            <h3>Menu do Curso</h3>
             <ul>
                 {courseStructure.map(module => (
                     <li key={module.title}>
@@ -119,27 +194,6 @@ const GuideView = ({ onStartQuiz }: GuideViewProps) => {
                         </ul>
                     </li>
                 ))}
-            </ul>
-
-            <span className="module-title">Guia Rápido: Conceitos</span>
-            <ul className="topic-list">
-                {quickGuideTopics.map(topicId => (
-                    <li key={topicId}>
-                        <a href="#" onClick={(e) => { e.preventDefault(); setActiveTopic(topicId) }} className={activeTopic === topicId ? 'active' : ''}>
-                            {topicsData[topicId].title.split('(')[0]}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-
-            <span className="module-title">Ferramentas</span>
-            <ul className="topic-list">
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveTopic('cidr_calculator')}} className={activeTopic === 'cidr_calculator' ? 'active' : ''}>Calculadora CIDR</a></li>
-            </ul>
-
-            <span className="module-title">Monitoramento Avançado</span>
-            <ul className="topic-list">
-                <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveTopic('zabbix')}} className={activeTopic === 'zabbix' ? 'active' : ''}>Monitoramento com Zabbix</a></li>
             </ul>
             
             <span className="module-title">Prática</span>
@@ -168,7 +222,7 @@ const GuideView = ({ onStartQuiz }: GuideViewProps) => {
       )}
       
       <footer>
-        <p>&copy; 2024 Maicon Gois. Todos os direitos reservados.&reg;</p>
+        <p>&copy; 2024 Academia da Rede. Desenvolvido por Maicon Gois.&reg;</p>
       </footer>
     </div>
   );

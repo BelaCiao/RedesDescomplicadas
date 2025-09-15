@@ -11,7 +11,7 @@ const LanguageSelector = ({ onSelect, onBackToGuide }: LanguageSelectorProps) =>
     <>
       <header className="quiz-header">
         <a className="back-link" onClick={onBackToGuide}>&larr; Voltar ao Guia</a>
-        <h1>CCNAPro Quiz</h1>
+        <h1>Academia da Rede - Quiz</h1>
       </header>
       <div className="card">
         <h2>Select Your Language / Selecione Seu Idioma</h2>
